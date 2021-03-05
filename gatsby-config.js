@@ -13,7 +13,7 @@ module.exports = {
         background_color: `#fafafa`,
         theme_color: `#fafafa`,
         display: `standalone`,
-        icon: `src/images/logo2.svg`,
+        icon: `src/images/icon.png`,
       },
     },
     'gatsby-plugin-image',
