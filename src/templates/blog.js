@@ -4,6 +4,9 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from "../components/head"
 
+import { FaArrowCircleLeft } from "react-icons/fa"
+
+
 export const query = graphql`
     query (
         $slug: String!
@@ -25,7 +28,10 @@ const Blog = (props) => {
             <h1>{props.data.markdownRemark.frontmatter.title}</h1>
             <p>{props.data.markdownRemark.frontmatter.date}</p>
             <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
-            <Link to="/blog">Back to posts</Link>
+            <Link to="/blog">
+                <FaArrowCircleLeft />
+                Back to posts
+            </Link>
         </Layout>
     )
 }

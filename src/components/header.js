@@ -2,7 +2,6 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from "gatsby";
 
 import * as headerStyles from './header.module.scss'
-// import './header.scss'
 
 import Logo from './logo'
 
@@ -18,17 +17,21 @@ const Header = () => {
     `)
     return (
         <header className={headerStyles.header}>
-            <Link className={headerStyles.title} to="/">
+            <div className={headerStyles.title}>
                 <div className={headerStyles.headerContainer}>
                     <div className={headerStyles.logo}>
-                        <Logo width="122.3365" height="92.13775" />
+                        <Link to="/">
+                            <Logo width="122.3365" height="92.13775" />
+                        </Link>
                     </div>
-                    <div>
-                        {data.site.siteMetadata.author}
-                        <span style={{fontWeight: "100"}}> Web Developer</span>
+                    <div style={{fontWeight: "800"}}>
+                        <Link to="/">
+                            {data.site.siteMetadata.author}
+                            <span style={{fontWeight: "100"}}> Web Developer</span>
+                        </Link>
                     </div>
                 </div>
-            </Link>
+            </div>
             <nav>
                 <ul className={headerStyles.navList}>
                     <li>

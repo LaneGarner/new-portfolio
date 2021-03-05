@@ -1,9 +1,12 @@
 import React from "react"
 import ReCAPTCHA from "react-google-recaptcha"
+
 import Layout from "../components/layout"
+import Head from "../components/head"
 
 const ContactPage = () => (
     <Layout>
+        <Head title="Contact"/>
         <div className="flex-center">
             <h1>Contact</h1>
             <p style={{textAlign: "center"}}><span style={{fontWeight: "800"}}>Want to get in touch?</span><br /> Use the form below to hire me, ask questions, give feedback on my site, etc.</p>

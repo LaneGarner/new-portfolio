@@ -1,14 +1,14 @@
 ---
-title: "Learning some gatsby"
+title: "Second post"
 date: "03-03-2021"
 ---
 
-I am learning gatsby. This is my second tutorial. Hopefully it plays better with the new gatsby that came out *yesterday*
+My *yesterday* post
 
 ![Grass](./grass.jpg)
 
 ## Topics covered
 
-1. Gatsby
-2. GraphQL!
-3. React
+1. Stuff
+2. things
+3. and the like
