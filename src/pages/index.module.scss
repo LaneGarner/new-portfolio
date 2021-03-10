@@ -1,27 +1,33 @@
+h1 {
+    font-size: 4rem;
+    font-family: monospace;
+    margin-bottom: 0;
+}
 .hero-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: .1rem;
-    margin-bottom: 6rem;
-    
-    div {
-        display: flex;
-        flex-direction: column;
-        margin: 2em;
-        max-width: 40%;
-        // flex-grow: 2;
-    }
-    h1, h2, p {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    h2 {
         font-family: monospace;
+        padding: .3em 0;
     }
-    h1 {
-        font-size: 4rem;
-    }
+
     p {
+        font-family: monospace;
         font-size: 1.2rem;
     }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    min-width: 300px;
+    margin-left: 2em;
 }
 
 .i-build {
@@ -59,7 +65,6 @@
     .icon {
         margin: .4em;;
     }
-    
 }
 
 .bio-cards {
@@ -68,12 +73,10 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 2em;
-    // justify-items: stretch;
-    // align-items: center;
     div {
-        font-family: serif;
+        font-family: sans-serif;
         font-size: .93em;
-        // text-align: justify;
+        text-align: center;
         color: #333;
         background: #FFF;
         width: 25em;
@@ -83,7 +86,6 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
     }
     p {
-        // width: 95%;
         margin: auto;
         padding: 0 1.2em 1em 1.2em;
     }
@@ -106,5 +108,16 @@
     h3 {
         font-family: monospace; 
         font-size: 3em;
+    }
+}
+
+.hire-me {
+    margin: 4rem 8rem;
+
+    h2 {
+        font-family: monospace;
+    }
+    p {
+        font-family: sans-serif;
     }
 }

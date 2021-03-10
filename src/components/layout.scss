@@ -6,8 +6,6 @@ $red: #BB2B11;
 
 .layout-container {
     margin: 0 auto;
-    // max-width: 750px;
-    // padding: 1rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -18,7 +16,6 @@ $red: #BB2B11;
 }
 
 .layout-main {
-    // padding: 0 4rem;
     margin-bottom: 1rem;
 }
 
@@ -81,7 +78,7 @@ template {
 a {
     background-color: transparent;
     color: #333;
-    text-decoration: none;
+    // text-decoration: none;
     -webkit-text-decoration-skip: objects;
 }
 a:active,

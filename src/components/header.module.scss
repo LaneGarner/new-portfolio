@@ -2,6 +2,7 @@
     padding: 1rem 0;
     a {
         font-family: monospace;
+        text-decoration: none;
     }
     a:hover {
         color: #666;
@@ -11,7 +12,6 @@
 .title {
     color: #333;
     font-size: 2rem;
-    text-decoration: none;
     font-family: sans-serif;
 }
 
@@ -26,7 +26,6 @@
     color: #999;
     font-size: 1.1rem;
     margin-right: 1.4rem;    
-    text-decoration: none;
     :hover {
         color: #666
     }
