@@ -30,6 +30,7 @@ const indexPage = () => {
             height={300}
             objectFit="cover"
             imgStyle={{borderRadius: "50%"}}
+            style={{borderRadius: "50%"}}
           />
         </div>
         <section className={indexStyles.right}>
