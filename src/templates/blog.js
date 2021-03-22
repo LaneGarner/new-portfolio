@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Head from "../components/head"
 
-import * as blogStyles from './blog.module.scss'
+import * as blogPostStyles from './blogpost.module.scss'
 
 import { FaArrowCircleLeft } from "react-icons/fa"
 
@@ -27,9 +27,9 @@ const Blog = (props) => {
     return (
         <Layout>
             <Head title={props.data.markdownRemark.frontmatter.title}/>
-            <div className={blogStyles.blogPostContainer}>
+            <div className={blogPostStyles.blogPostContainer}>
                 <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-                <p className={blogStyles.date}>{props.data.markdownRemark.frontmatter.date}</p>
+                <p className={blogPostStyles.date}>{props.data.markdownRemark.frontmatter.date}</p>
                 <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
                 <Link to="/blog">
                     <FaArrowCircleLeft />
