@@ -28,8 +28,8 @@ const indexPage = () => {
             placeholder="blurred"
             width={300}
             height={300}
-            style={{borderRadius: "50%"}}
             objectFit="cover"
+            imgStyle={{borderRadius: "50%"}}
           />
         </div>
         <section className={indexStyles.right}>
