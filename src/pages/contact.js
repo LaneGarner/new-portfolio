@@ -9,14 +9,17 @@ const ContactPage = () => (
         <Head title="Contact"/>
         <div className="flex-center">
             <h1>Contact</h1>
-            <p style={{textAlign: "center"}}><span style={{fontWeight: "800"}}>Want to get in touch?</span><br /> Use the form below to hire me, ask questions, give feedback on my site, etc.</p>
-            <form 
+            <p style={{ textAlign: "center" }}><span style={{ fontWeight: "800" }}>
+                Want to get in touch?</span><br /> Use the form below to hire me, ask questions, give feedback on my site, etc.
+            </p>
+            <form
                 className="flex-center" 
                 name="feedback" 
                 method="POST" 
                 data-netlify-recaptcha="true" 
                 data-netlify="true"
-                action="/thank-you" >
+                action="/thank-you" 
+            >
             <input type="hidden" name="form-name" value="feedback" />
             <div>
                 <label htmlFor="name">Name:</label>

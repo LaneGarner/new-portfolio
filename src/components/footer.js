@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import * as footerStyles from './footer.module.scss'
-import './footer.scss'
 
 import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si"
 
@@ -38,7 +37,7 @@ const Footer = () => {
                 </div>
             </a>
             </div>
-            © {new Date().getFullYear()}, {data.site.siteMetadata.author}
+            <span className={footerStyles.copyright}>© {new Date().getFullYear()}, {data.site.siteMetadata.author}</span>
         </footer>
     )
 }

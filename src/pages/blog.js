@@ -30,18 +30,20 @@ const BlogPage = () => {
     return (
         <Layout>
             <Head title="Blog"/>
-            <h1>Blog</h1>
-            <p>My blog posts</p>
-            <ol className={blogStyles.posts}>
-                {data.allMarkdownRemark.edges.map((edge)=> (
-                    <li className={blogStyles.post}>
-                        <Link to={`/blog/${edge.node.fields.slug}`}>
-                            <h2>{edge.node.frontmatter.title}</h2>
-                            <p>{edge.node.frontmatter.date}</p>
-                        </Link>
-                    </li>
-                ))}
-            </ol>
+            <div className={blogStyles.blogContainer}>
+                <h1>Blog</h1>
+                <p>My blog posts</p>
+                <ol className={blogStyles.posts}>
+                    {data.allMarkdownRemark.edges.map((edge)=> (
+                        <li className={blogStyles.post}>
+                            <Link to={`/blog/${edge.node.fields.slug}`}>
+                                <h2>{edge.node.frontmatter.title}</h2>
+                                <p>{edge.node.frontmatter.date}</p>
+                            </Link>
+                        </li>
+                    ))}
+                </ol>
+            </div>
         </Layout>
     )
 }

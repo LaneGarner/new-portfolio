@@ -18,6 +18,7 @@ const Header = () => {
     return (
         <header className={headerStyles.header}>
             <div className={headerStyles.title}>
+
                 <div className={headerStyles.headerContainer}>
                     <div className={headerStyles.logo}>
                         <Link to="/">

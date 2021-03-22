@@ -19,21 +19,25 @@ const indexPage = () => {
     <Layout>
       <Head title="Home" />
       <div className={indexStyles.heroContainer}>
-        <StaticImage
-          src="../images/profilePic.jpg"
-          alt="Profile pic"
-          placeholder="blurred"
-          width={300}
-          height={300}
-          style={{borderRadius: "50%"}}
-          objectFit="cover"
-        />
+        <div>
+          {/* <div style={{width: "500px", height: "500px", borderRadius: "50%", backgroundColor: "yellow", position: "fixed", margin: "auto", zIndex: "-100"}}></div> */}
+          {/* <div style={{width: "200px", height: "20px", backgroundColor: "#0C60FF", position: "fixed", marginLeft: "auto", marginRight: "auto", left: 100, top: 100, zIndex: "-100"}}></div> */}
+          <StaticImage
+            src="../images/profilePic.jpg"
+            alt="Profile pic"
+            placeholder="blurred"
+            width={300}
+            height={300}
+            style={{borderRadius: "50%"}}
+            objectFit="cover"
+          />
+        </div>
         <section className={indexStyles.right}>
             <h1>
               <ReactTypingEffect
-                text={"Hello..."}
+                text={"Hello."}
                 typingDelay={1000}
-                eraseDelay={1000}
+                eraseDelay={1500}
                 speed={300}
                 eraseSpeed={100}
               />
@@ -48,58 +52,58 @@ const indexPage = () => {
         <div className={indexStyles.divTwo}>websites and applications</div>
       </div>
       <div className={indexStyles.aboutIcons}>
-        <div>
-          <SiReact title="React" size="3em" />
+        <div tooltip="React">
+          <SiReact size="3em" />
         </div>
         <div>
-          <div className={indexStyles.icon}>
-            <SiJavascript title="JavaScript" size="3em" />
+          <div tooltip="JavaScript" className={indexStyles.icon}>
+            <SiJavascript size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiHtml5 title="HTML" size="3em" />
+          <div tooltip="HTML" className={indexStyles.icon}>
+            <SiHtml5 size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiCss3 title="CSS" size="3em" />
-          </div>
-        </div>
-        <div>
-          <div className={indexStyles.icon}>
-            <FaNode title="Node.js" size="3em" />
-          </div>
-          <div className={indexStyles.icon}>
-            <FaNpm title="npm" size="3em" />
-          </div>
-          <div className={indexStyles.icon}>
-            <SiRedux title="Redux" size="3em" />
-          </div>
-          <div className={indexStyles.icon}>
-            <SiSass title="SCSS" size="3em" />
-          </div>
-          <div className={indexStyles.icon}>
-            <SiGatsby title="Gatsby" size="3em" />
+          <div tooltip="CSS" className={indexStyles.icon}>
+            <SiCss3 size="3em" />
           </div>
         </div>
         <div>
-          <div className={indexStyles.icon}>
-            <SiMysql title="MySQL" size="3em" />
+          <div tooltip="Node.js" className={indexStyles.icon}>
+            <FaNode size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiFirebase title="Firebase" size="3em" />
+          <div tooltip="npm" className={indexStyles.icon}>
+            <FaNpm size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiGithub title="Git and GitHub" size="3em" />
+          <div tooltip="Redux" className={indexStyles.icon}>
+            <SiRedux size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiBootstrap title="Bootstrap" size="3em" />
+          <div tooltip="SCSS" className={indexStyles.icon}>
+            <SiSass size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiGoogle title="Google Cloud Platform" size="3em" />
+          <div tooltip="Gatsby" className={indexStyles.icon}>
+            <SiGatsby size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiAdobe title="Adobe XD, Photoshop, Illustrator" size="3em" />
+        </div>
+        <div>
+          <div tooltip="MySQL" className={indexStyles.icon}>
+            <SiMysql size="3em" />
           </div>
-          <div className={indexStyles.icon}>
-            <SiFigma title="Figma" size="3em" />
+          <div tooltip="Firebase" className={indexStyles.icon}>
+            <SiFirebase size="3em" />
+          </div>
+          <div tooltip="Git and GitHub" className={indexStyles.icon}>
+            <SiGithub size="3em" />
+          </div>
+          <div tooltip="Bootstrap" className={indexStyles.icon}>
+            <SiBootstrap size="3em" />
+          </div>
+          <div tooltip="GCP" className={indexStyles.icon}>
+            <SiGoogle size="3em" />
+          </div>
+          <div tooltip="Adobe XD, Photoshop, Illustrator" className={indexStyles.icon}>
+            <SiAdobe size="3em" />
+          </div>
+          <div tooltip="Figma" className={indexStyles.icon}>
+            <SiFigma size="3em" />
           </div>
         </div>
       </div>
@@ -132,7 +136,7 @@ const indexPage = () => {
       <div className={indexStyles.hireMe}>
         <h1>Hire me</h1>
         <h2>Let's work together to create your dream website or app</h2>
-        <p>I offer freelance web development services to clients</p>
+        <p>I offer freelance full stack web development services to clients</p>
         <p><Link to="/portfolio"><strong>Browse my portfolio</strong></Link> as an introduction to my work or <Link to="/contact"><strong>get in touch</strong></Link> to start the discussion</p>
       </div>
     </Layout>
