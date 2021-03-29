@@ -49,7 +49,7 @@ const indexPage = () => {
       </div>
       <div className={indexStyles.hireMe}>
         <h2>Hire me</h2>
-        <p>I am currently seeking fulltime employment as a frontend developer. I have experience working on a remote dev team and thrive in an agile environment. I also offer freelance web development services to clients. Let's work together to create your dream website or app.</p>
+        <p>I am currently seeking full-time employment as a front-end developer. I have experience working on a remote dev team and thrive in an agile environment. I also offer freelance web development services to clients. Let's work together to create your dream website or app.</p>
         <p><Link to="/portfolio"><strong>Browse my portfolio</strong></Link> as an introduction to my work or <Link to="/contact"><strong>get in touch</strong></Link> to start a conversation.</p>
       </div>
       <div className={indexStyles.iBuild}>
