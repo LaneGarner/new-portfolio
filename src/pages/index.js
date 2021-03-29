@@ -42,10 +42,15 @@ const indexPage = () => {
                 speed={300}
                 eraseSpeed={100}
               />
-            </h1>
           <h2 style={{fontWeight: 100}}>I'm<span style={{fontWeight: 800}}> Lane Garner,</span><br/> a full-stack developer<br/> based in Austin, Texas.</h2>
-          <p>Need a developer? <Link to="/contact" style={{textDecoration: "underline"}}><strong>Contact me</strong></Link>.</p>
+            </h1>
+          <p>Need a developer? <Link to="/contact" style={{textDecoration: "underline"}}><strong>Get in touch</strong></Link>.</p>
         </section>
+      </div>
+      <div className={indexStyles.hireMe}>
+        <h2>Hire me</h2>
+        <p>I am currently seeking fulltime employment as a frontend developer. I have experience working on a remote dev team and thrive in an agile environment. I also offer freelance web development services to clients. Let's work together to create your dream website or app.</p>
+        <p><Link to="/portfolio"><strong>Browse my portfolio</strong></Link> as an introduction to my work or <Link to="/contact"><strong>get in touch</strong></Link> to start a conversation.</p>
       </div>
       <div className={indexStyles.iBuild}>
         <div className={indexStyles.divOne}>I build</div>
@@ -54,57 +59,57 @@ const indexPage = () => {
       </div>
       <div className={indexStyles.aboutIcons}>
         <div tooltip="React">
-          <SiReact size="3em" />
+          <SiReact size="3em" color="#60DBFB" />
         </div>
         <div>
           <div tooltip="JavaScript" className={indexStyles.icon}>
-            <SiJavascript size="3em" />
-          </div>
-          <div tooltip="HTML" className={indexStyles.icon}>
-            <SiHtml5 size="3em" />
+            <SiJavascript color="#FCDC00" size="3em" style={{background: "#333"}}/>
           </div>
           <div tooltip="CSS" className={indexStyles.icon}>
-            <SiCss3 size="3em" />
+            <SiCss3 size="3em" color="#2299F8" />
+          </div>
+          <div tooltip="HTML" className={indexStyles.icon}>
+            <SiHtml5 size="3em" color="#E44D27" />
           </div>
         </div>
         <div>
           <div tooltip="Node.js" className={indexStyles.icon}>
-            <FaNode size="3em" />
+            <FaNode size="3em" color="#539E43" />
           </div>
           <div tooltip="npm" className={indexStyles.icon}>
-            <FaNpm size="3em" />
+            <FaNpm size="3em" color="#E32D37" />
           </div>
           <div tooltip="Redux" className={indexStyles.icon}>
-            <SiRedux size="3em" />
+            <SiRedux size="3em" color="#8043C4" />
           </div>
           <div tooltip="SCSS" className={indexStyles.icon}>
-            <SiSass size="3em" />
+            <SiSass size="3em" color="#CD669A" />
           </div>
           <div tooltip="Gatsby" className={indexStyles.icon}>
-            <SiGatsby size="3em" />
+            <SiGatsby size="3em" color="#744C9F" />
           </div>
         </div>
         <div>
-          <div tooltip="MySQL" className={indexStyles.icon}>
-            <SiMysql size="3em" />
-          </div>
-          <div tooltip="Firebase" className={indexStyles.icon}>
-            <SiFirebase size="3em" />
-          </div>
           <div tooltip="Git and GitHub" className={indexStyles.icon}>
-            <SiGithub size="3em" />
+            <SiGithub size="3em" color="#333" />
+          </div>
+          <div tooltip="MySQL" className={indexStyles.icon}>
+            <SiMysql size="3em" color="#E58E00" />
           </div>
           <div tooltip="Bootstrap" className={indexStyles.icon}>
-            <SiBootstrap size="3em" />
+            <SiBootstrap size="3em" color="#523B77" />
+          </div>
+          <div tooltip="Firebase" className={indexStyles.icon}>
+            <SiFirebase size="3em" color="#F7C52B" />
           </div>
           <div tooltip="GCP" className={indexStyles.icon}>
-            <SiGoogle size="3em" />
+            <SiGoogle size="3em" color="#F3B635" />
           </div>
           <div tooltip="Adobe XD, Photoshop, Illustrator" className={indexStyles.icon}>
-            <SiAdobe size="3em" />
+            <SiAdobe size="3em" color="#F30F01" />
           </div>
           <div tooltip="Figma" className={indexStyles.icon}>
-            <SiFigma size="3em" />
+            <SiFigma size="3em" color="#19B6F5" />
           </div>
         </div>
       </div>
@@ -134,12 +139,7 @@ const indexPage = () => {
           <p>I recently completed a certification in Fullstack Web Development from Austin Coding Academy.</p>
         </div>
       </div>
-      <div className={indexStyles.hireMe}>
-        <h1>Hire me</h1>
-        <h2>Let's work together to create your dream website or app</h2>
-        <p>I offer freelance full stack web development services to clients</p>
-        <p><Link to="/portfolio"><strong>Browse my portfolio</strong></Link> as an introduction to my work or <Link to="/contact"><strong>get in touch</strong></Link> to start the discussion</p>
-      </div>
+      
     </Layout>
   )
 }

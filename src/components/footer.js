@@ -18,26 +18,29 @@ const Footer = () => {
     return (
         <footer className={`${footerStyles.footer} flex-center`}>
             <div>
-            <a href="https://github.com/LaneGarner" target="_blank" rel="noreferrer">
-                <div className="flex-center">
-                    <SiGithub size="2em" />
-                    GitHub
-                </div>
-            </a>
-            <a href="https://www.linkedin.com/in/lanegarner" target="_blank" rel="noreferrer">
-                <div className="flex-center">
-                    <SiLinkedin size="2em" />
-                    LinkedIn
-                </div>
-            </a>
-            <a href="https://twitter.com/lanegarner" target="_blank" rel="noreferrer">
-                <div className="flex-center">
-                    <SiTwitter size="2em" />
-                    Twitter
-                </div>
-            </a>
+                <a href="https://github.com/LaneGarner" target="_blank" rel="noreferrer">
+                    <div className="flex-center footer-icon">
+                        <SiGithub size="2em" />
+                        GitHub
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/lanegarner" target="_blank" rel="noreferrer">
+                    <div className="flex-center footer-icon">
+                        <SiLinkedin size="2em" />
+                        LinkedIn
+                    </div>
+                </a>
+                <a href="https://twitter.com/lanegarner" target="_blank" rel="noreferrer">
+                    <div className="flex-center footer-icon">
+                        <SiTwitter size="2em" />
+                        Twitter
+                    </div>
+                </a>
             </div>
-            <span className={footerStyles.copyright}>© {new Date().getFullYear()}, {data.site.siteMetadata.author}</span>
+            <div className={footerStyles.secondFooter}>
+                <span className={footerStyles.copyright}>© {new Date().getFullYear()}, {data.site.siteMetadata.author}.</span>
+                <span>Created with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a> and <a href="https://sass-lang.com/" target="_blank">SCSS.</a></span>
+            </div>
         </footer>
     )
 }

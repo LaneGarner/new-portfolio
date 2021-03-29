@@ -47,7 +47,6 @@ const AboutPage = () => {
                             <p>Online guitar instruction content, courses, and advertising materials for lessons</p>
                             <div className={portfolioStyles.preview}></div>
                             <p>Static site built with JavaScript, HTML, and CSS</p>
-                            <p>Plans to rebuild with Gatsby</p>
                             <div className={portfolioStyles.social}>
                                 <a href="https://github.com/LaneGarner/GarnerGuitar" rel="noreferrer" target="_blank">
                                     <div>

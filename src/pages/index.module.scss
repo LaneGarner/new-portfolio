@@ -6,11 +6,11 @@ h1 {
 .hero-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-bottom: 4rem;
-
+    min-height: 70vh;
     h2 {
         font-family: monospace;
         padding: .3em 0;
@@ -104,7 +104,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
     div {
         font-family: sans-serif;
         font-size: .93em;
@@ -144,10 +144,15 @@ h1 {
 }
 
 .hire-me {
-    margin: 4rem 8rem;
-
+    padding: 4rem 8rem;
+    background-color: #333;
+    color: white;
+    a {
+        color: white;
+    }
     h2 {
         font-family: monospace;
+        font-size: 4em;
     }
     p {
         font-family: sans-serif;
