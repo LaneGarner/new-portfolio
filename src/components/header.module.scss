@@ -25,7 +25,7 @@ nav {
 }
 
 .title {
-    color: #333;
+    color: var(--dark-grey);
     font-size: 2rem;
     font-family: sans-serif;
 }
@@ -48,7 +48,7 @@ nav {
 }
 
 .active-nav-item {
-    color: #333;
+    color: var(--dark-grey);
 }
 
 .header-container {

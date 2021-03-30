@@ -4,6 +4,30 @@ $darkgrey: #1F1E24;
 $brown: #7F6D58;
 $red: #BB2B11;
 
+:root {
+    --black: #121212;
+    --darkest-grey: #222;
+    --darker-grey: #272727;
+    --dark-grey: #333;
+    --light-grey: #666;
+    --lighter-grey: #999;
+    --lightest-grey: #FAFAFA;
+    --react-blue: #60DBFB;
+    --js-yellow: #FCDC00;
+    --css-blue: #2299F8;
+    --html-red: #E44D27;
+    --node-green: #539E43;
+    --npm-red: #E32D37;
+    --redux-purple: #8043C4;
+    --sass-pink: #CD669A;
+    --gatsby-purple: #744C9F;
+    --sql-orange: #E58E00;
+    --bootstrap-purple: #523B77;
+    --firebase-yellow: #F7C52B;
+    --adobe-red: #F30F01;
+    --figma-blue: #19B6F5;
+}
+
 .layout-container {
     margin: 0 auto;
     display: flex;

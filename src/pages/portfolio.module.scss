@@ -3,15 +3,15 @@
     flex-direction: column;
     display: center;
     margin-bottom: 4rem;
+    h1 {
+        margin-bottom: 0.3em;
+    }
     h1, h2 {
         text-align: center;
     }
     p {
         font-family: sans-serif;
         text-align: center;
-    }
-    h2 {
-        font-family: monospace;
     }
     a {
         text-decoration: none;
@@ -22,70 +22,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-    h2 {
-        font-size: 2.5rem;
-        padding-top: 2rem;
-
-    }
-    .card {
-        background: #333;
-        color: white;
-        margin: 2rem;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
-        width: 30rem;
-        
-        p {
-            text-align: center;
-            padding: 0 3em;
-        }
-        a { 
-            color: white;
-        }
-    }
-
-    .card:hover {
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.431);
-    }
-
     p {
         font-family: sans-serif;
-    }
-}
-
-.preview {
-    background-color: white;
-    width: 400px;
-    height: 250px;
-    border-radius: 1em;
-    margin: 2em auto;
-}
-
-.social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    // position: absolute;
-    // bottom: 0
-    
-    div {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: auto 1.5rem;
-    }
-    a {
-        text-decoration: none;
-        transition: all .2s ease-in;
-    }
-    a:hover {
-        color: yellow;
-        
-        // a {
-        //     color: yellow;
-        // }
     }
 }

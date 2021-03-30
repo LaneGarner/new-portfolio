@@ -59,82 +59,79 @@ const indexPage = () => {
       </div>
       <div className={indexStyles.aboutIcons}>
         <div tooltip="React">
-          <SiReact size="3em" color="#60DBFB" />
+          <SiReact size="3em" color="var(--react-blue)" />
         </div>
         <div>
           <div tooltip="JavaScript" className={indexStyles.icon}>
-            <SiJavascript color="#FCDC00" size="3em" style={{background: "#333"}}/>
+            <SiJavascript color="var(--js-yellow)" size="3em" style={{background: "var(--dark-grey)"}}/>
           </div>
           <div tooltip="CSS" className={indexStyles.icon}>
-            <SiCss3 size="3em" color="#2299F8" />
+            <SiCss3 size="3em" color="var(--css-blue)" />
           </div>
           <div tooltip="HTML" className={indexStyles.icon}>
-            <SiHtml5 size="3em" color="#E44D27" />
+            <SiHtml5 size="3em" color="var(--html-red)" />
           </div>
         </div>
         <div>
           <div tooltip="Node.js" className={indexStyles.icon}>
-            <FaNode size="3em" color="#539E43" />
+            <FaNode size="3em" color="var(--node-green)" />
           </div>
           <div tooltip="npm" className={indexStyles.icon}>
-            <FaNpm size="3em" color="#E32D37" />
+            <FaNpm size="3em" color="var(--npm-red)" />
           </div>
           <div tooltip="Redux" className={indexStyles.icon}>
-            <SiRedux size="3em" color="#8043C4" />
+            <SiRedux size="3em" color="var(--redux-purple)" />
           </div>
           <div tooltip="SCSS" className={indexStyles.icon}>
-            <SiSass size="3em" color="#CD669A" />
+            <SiSass size="3em" color="var(--sass-pink)" />
           </div>
           <div tooltip="Gatsby" className={indexStyles.icon}>
-            <SiGatsby size="3em" color="#744C9F" />
+            <SiGatsby size="3em" color="var(--gatsby-purple)" />
           </div>
         </div>
         <div>
-          <div tooltip="Git and GitHub" className={indexStyles.icon}>
-            <SiGithub size="3em" color="#333" />
-          </div>
           <div tooltip="MySQL" className={indexStyles.icon}>
-            <SiMysql size="3em" color="#E58E00" />
+            <SiMysql size="3em" color="var(--sql-orange)" />
+          </div>
+          <div tooltip="Git and GitHub" className={indexStyles.icon}>
+            <SiGithub size="3em" color="var(--dark-grey)" />
           </div>
           <div tooltip="Bootstrap" className={indexStyles.icon}>
-            <SiBootstrap size="3em" color="#523B77" />
+            <SiBootstrap size="3em" color="var(--bootstrap-purple)" />
           </div>
           <div tooltip="Firebase" className={indexStyles.icon}>
-            <SiFirebase size="3em" color="#F7C52B" />
-          </div>
-          <div tooltip="GCP" className={indexStyles.icon}>
-            <SiGoogle size="3em" color="#F3B635" />
+            <SiFirebase size="3em" color="var(--firebase-yellow)" />
           </div>
           <div tooltip="Adobe XD, Photoshop, Illustrator" className={indexStyles.icon}>
-            <SiAdobe size="3em" color="#F30F01" />
+            <SiAdobe size="3em" color="var(--adobe-red)" />
           </div>
           <div tooltip="Figma" className={indexStyles.icon}>
-            <SiFigma size="3em" color="#19B6F5" />
+            <SiFigma size="3em" color="var(--figma-blue)" />
           </div>
         </div>
       </div>
       <div className={indexStyles.bioCards}>
         <div>
           <div className={indexStyles.bulb}>
-            <IoInformationCircleOutline size="9em" />
+            <IoInformationCircleOutline color="var(--react-blue)" size="9em" />
           </div>
           <p>I have a strong foundation in JavaScript (ES6+), CSS/SCSS, HTML, mySQL, Node.js, Express, and more.</p>
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <IoBulbOutline size="9em" />
+            <IoBulbOutline color="var(--js-yellow)" size="9em" />
           </div>
           <p>I also enjoy learning and working with technologies such as React, React Native, Gatsby, Redux, GraphQL, and Firebase to build passion projects.</p>
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <FaPaintBrush size="9em" />
+            <FaPaintBrush color="var(--node-green)" size="9em" />
           </div>
           <p>My work is design focused and my background as a musician inspires creativity throughout the development process.</p>
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <FaGraduationCap size="9em" />
+            <FaGraduationCap color="var(--gatsby-purple)" size="9em" />
           </div>
           <p>I recently completed a certification in Fullstack Web Development from Austin Coding Academy.</p>
         </div>

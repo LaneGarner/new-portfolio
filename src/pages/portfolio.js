@@ -2,8 +2,9 @@ import React from 'react'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import {PortfolioCard} from "../components/PortfolioCard"
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa"
 import { GoBrowser } from "react-icons/go"
 
 import * as portfolioStyles from './portfolio.module.scss'
@@ -15,121 +16,43 @@ const AboutPage = () => {
             <Head title="Portfolio"/>
             <section className={portfolioStyles.portfolioContainer}>
                 <h1>Portfolio</h1>
-                <p>My portfolio blah blah blah</p>
-                
+                <p>Here are some of my favorite projects that highlight a variety of tech that I've worked with:</p>
                 <div className={portfolioStyles.portfolioCardContainer}>
-                    <a href="https://shedr.app" rel="noreferrer" target="_blank">
-                        <div className={portfolioStyles.card}>
-                            <h2>Shedr</h2>
-                            <p>Musician’s practice toolkit web application</p>
-                            <div className={portfolioStyles.preview}></div>
-                            <p>Built with React.js, Node.js, CSS/SCSS, Firebase Realtime Database (No SQL), Context API, Tone.js</p>
-                            <p>User authentication via email, Google, Apple, and Facebook login</p>
-                            <div className={portfolioStyles.social}>
-                                <a href="https://github.com/LaneGarner/shedr" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <FaGithub size="1.7rem" />
-                                        Code
-                                    </div>
-                                </a>
-                                <a href="https://shedr.app">
-                                    <div>
-                                        <GoBrowser size="1.7rem" />
-                                        Hosted
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://garnerguitar.com" rel="noreferrer" target="_blank">
-                        <div className={portfolioStyles.card}>
-                            <h2>GarnerGuitar.com</h2>
-                            <p>Online guitar instruction content, courses, and advertising materials for lessons</p>
-                            <div className={portfolioStyles.preview}></div>
-                            <p>Static site built with JavaScript, HTML, and CSS</p>
-                            <div className={portfolioStyles.social}>
-                                <a href="https://github.com/LaneGarner/GarnerGuitar" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <FaGithub size="1.7rem" />
-                                        Code
-                                    </div>
-                                </a>
-                                <a href="https://garnerguitar.com" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <GoBrowser size="1.7rem" />
-                                        Hosted
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://github.com/LaneGarner/today-list" rel="noreferrer" target="_blank">
-                        <div className={portfolioStyles.card}>
-                            <h2>Today List</h2>
-                            <p>My version of the ultimate todo app</p>
-                            <div className={portfolioStyles.preview}></div>
-                            <p>Developed with React Native, Firebase Firestore, Authentication, and Redux</p>
-                            <div className={portfolioStyles.social}>
-                                <a href="https://github.com/LaneGarner/today-list" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <FaGithub size="1.7rem" />
-                                        Code
-                                    </div>
-                                </a>
-                                {/* SAVE THIS FOR FUTURE HOSTED VERSION */}
-                                {/* <a href="https://todaylist.app">
-                                    <div>
-                                        <GoBrowser size="1.7rem" />
-                                    </div>
-                                    Hosted
-                                </a> */}
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://lanegarner.dev" rel="noreferrer" target="_blank">
-                        <div className={portfolioStyles.card}>
-                            <h2>LaneGarner.dev</h2>
-                            <p>Personal portfolio site</p>
-                            <div className={portfolioStyles.preview}></div>
-                            <p>Developed with React, Gatsby, SCSS, GraphQL, and Markdown</p>
-                            <div className={portfolioStyles.social}>
-                                <a href="https://github.com/LaneGarner/new-portfolio" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <FaGithub size="1.7rem" />
-                                        Code
-                                    </div>
-                                </a>
-                                <a href="https://lanegarner.dev" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <GoBrowser size="1.7rem" />
-                                        Hosted
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </a>
-                    {/* --------SAVE THIS TO ADD MORE CARDS------------- */}
-                    {/* <a href="https://github.com/LaneGarner" rel="noreferrer" target="_blank">
-                        <div className={portfolioStyles.card}>
-                            <h2>Today List</h2>
-                            <p></p>
-                            <div className={portfolioStyles.preview}></div>
-                            <div className={portfolioStyles.social}>
-                                <a href="https://github.com/LaneGarner" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <FaGithub size="1.7rem" />
-                                    </div>
-                                    Code
-                                </a>
-                                <a href="https://github.com/LaneGarner" rel="noreferrer" target="_blank">
-                                    <div>
-                                        <GoBrowser size="1.7rem" />
-                                    </div>
-                                    Hosted
-                                </a>
-                            </div>
-                        </div>
-                    </a> */}
+                <PortfolioCard 
+                    name="Shedr"
+                    description="Musician’s practice toolkit web app"
+                    uses="React, Node.js, SCSS, & Firebase"
+                    url="https://shedr.app"
+                    github="https://github.com/LaneGarner/shedr"
+                />
+                <PortfolioCard 
+                    name="Garner Guitar"
+                    description="Online guitar instruction content, courses, and advertising materials for lessons"
+                    uses="Static site built with JavaScript, HTML, & CSS"
+                    url="https://garnerguitar.com"
+                    github="https://github.com/LaneGarner/GarnerGuitar"
+                />
+                <PortfolioCard 
+                    name="Today List"
+                    description="My version of the ultimate todo app"
+                    uses="React Native, Firebase Firestore, & Redux"
+                    url="https://github.com/LaneGarner/today-list"
+                    github="https://github.com/LaneGarner/today-list"
+                />
+                <PortfolioCard 
+                    name="Draftrr"
+                    description="Draftrr is a writing application that encourages finishing the first draft"
+                    uses="Built with remote team using React, Bootstrap, MySQL, & MongoDB"
+                    url="https://draftrr.com"
+                    github="https://github.com/theMVPshop/DT02/tree/main/draftrr-react"
+                />
+                {/* <PortfolioCard 
+                    name=""
+                    description=""
+                    uses=""
+                    url=""
+                    github=""
+                /> */}
                 </div>
             </section>
         </Layout>
