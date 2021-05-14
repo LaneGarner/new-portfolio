@@ -43,14 +43,14 @@ const BlogPage = () => {
             <li className={blogStyles.post}>
               <Link to={`/blog/${edge.node.fields.slug}`}>
                 <p>{edge.node.frontmatter.featuredImage.relativePath}</p>
-                <StaticImage
+                {/* <StaticImage
                   src={`https://lanegarner.dev/${edge.node.frontmatter.featuredImage.relativePath}`}
                   alt="Featured image"
                   placeholder="blurred"
                   width={300}
                   height={300}
                   objectFit="cover"
-                />
+                /> */}
                 <h2>{edge.node.frontmatter.title}</h2>
                 <p>{edge.node.frontmatter.date}</p>
               </Link>
