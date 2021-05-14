@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -17,13 +18,13 @@ const BlogPage = () => {
               title
               date
               featuredImage {
-                relativePath
-                absolutePath
+                base
+                publicURL
               }
             }
-            # fields {
-            #   slug
-            # }
+            fields {
+              slug
+            }
             html
             excerpt
           }
@@ -41,10 +42,11 @@ const BlogPage = () => {
         <ol className={blogStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => (
             <li className={blogStyles.post}>
+              <p>{edge.node.frontmatter.featuredImage.publicURL}</p>
               <Link to={`/blog/${edge.node.fields.slug}`}>
-                <p>{edge.node.frontmatter.featuredImage.relativePath}</p>
+                <p>{`./${edge.node.frontmatter.featuredImage.base}`}</p>
                 {/* <StaticImage
-                  src={`https://lanegarner.dev/${edge.node.frontmatter.featuredImage.relativePath}`}
+                  image={`./${edge.node.frontmatter.featuredImage.base}`}
                   alt="Featured image"
                   placeholder="blurred"
                   width={300}
