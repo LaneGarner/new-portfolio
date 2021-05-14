@@ -21,9 +21,9 @@ const BlogPage = () => {
                 absolutePath
               }
             }
-            fields {
-              slug
-            }
+            # fields {
+            #   slug
+            # }
             html
             excerpt
           }
