@@ -21,21 +21,30 @@ import {
   SiSass,
   SiFigma,
   SiGithub,
-  SiGoogle,
 } from "react-icons/si"
 import { IoBulbOutline, IoInformationCircleOutline } from "react-icons/io5"
 import { FaNode, FaNpm, FaGraduationCap, FaPaintBrush } from "react-icons/fa"
 
 import * as indexStyles from "./index.module.scss"
 
-const indexPage = () => {
+export const query = graphql`
+  query myProfilePic {
+    file(relativePath: { eq: "profilePic.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+const indexPage = ({ data }) => {
   return (
     <Layout>
       <Head title="Home" />
       <div className={indexStyles.heroContainer}>
         <div>
-          {/* <div style={{width: "500px", height: "500px", borderRadius: "50%", backgroundColor: "yellow", position: "fixed", margin: "auto", zIndex: "-100"}}></div> */}
-          {/* <div style={{width: "200px", height: "20px", backgroundColor: "#0C60FF", position: "fixed", marginLeft: "auto", marginRight: "auto", left: 100, top: 100, zIndex: "-100"}}></div> */}
           <StaticImage
             src="../images/profilePic.jpg"
             alt="Profile pic"
@@ -56,12 +65,12 @@ const indexPage = () => {
               speed={300}
               eraseSpeed={100}
             />
-            <h2 style={{ fontWeight: 100 }}>
-              I'm<span style={{ fontWeight: 800 }}> Lane Garner,</span>
-              <br /> a full-stack developer
-              <br /> based in Austin, Texas.
-            </h2>
           </h1>
+          <h2 style={{ fontWeight: 100 }}>
+            I'm<span style={{ fontWeight: 800 }}> Lane Garner,</span>
+            <br /> a full-stack developer
+            <br /> based in Austin, Texas.
+          </h2>
           <p>
             Need a developer?{" "}
             <Link to="/contact" style={{ textDecoration: "underline" }}>

@@ -55,11 +55,11 @@ const Footer = () => {
         </span>
         <span>
           Created with{" "}
-          <a href="https://www.gatsbyjs.com/" target="_blank">
+          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
             GatsbyJS
           </a>{" "}
           and{" "}
-          <a href="https://sass-lang.com/" target="_blank">
+          <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
             SCSS.
           </a>
         </span>

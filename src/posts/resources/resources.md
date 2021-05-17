@@ -1,12 +1,10 @@
 ---
 title: "Resources for learning web development"
 date: "05-14-2021"
-featuredImage: "./web-dev-resources.jpg"
+featuredImage: ./web-dev-resources.jpg
 ---
 
-![Laptop](./web-dev-resources.jpg)
-
-Every so often someone who is just starting the journey of learning to code reaches out to me for advice. While my own journey may not be as long as others, I feel that I've come across some incredible resources along the path. There are tons of great resources for learning web development. From books to YouTube creators to Udemy courses to training websites&mdash;the options can be overwhelming at times. This post is a curated list of some of my favorites!
+Every so often someone who is just starting the journey of learning to code reaches out for advice. I feel that I've come across some incredible resources along the learning path and wanted a place to point others who are just beginning. There are tons of great resources for learning web development. From books to YouTube creators to Udemy courses to training websites&mdash;the options can be overwhelming at times. This post is a curated list of some of my favorites!
 
 ## Basics
 

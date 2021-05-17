@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { PortfolioCard } from "../components/PortfolioCard"
 
-import { FaGithub } from "react-icons/fa"
-
 import * as portfolioStyles from "./portfolio.module.scss"
 
 const AboutPage = () => {

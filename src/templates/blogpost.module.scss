@@ -1,9 +1,17 @@
 .blog-post-container {
-    margin: 4em;
-    h2, h3 .date {
-        font-family: monospace;
-    }
-    p {
-        font-family: sans-serif;
-    }
+  margin: 4em;
+  h2,
+  h3 .date {
+    font-family: monospace;
+  }
+  p {
+    font-family: sans-serif;
+  }
+  .date {
+    font-family: monospace;
+    font-size: 1.2em;
+  }
+  .title {
+    font-size: 3em;
+  }
 }
