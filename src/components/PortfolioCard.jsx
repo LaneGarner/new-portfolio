@@ -8,9 +8,15 @@ import * as PortfolioCardStyles from "./PortfolioCard.module.scss"
 export const PortfolioCard = ({ name, description, uses, url, github }) => {
   return (
     <div className={PortfolioCardStyles.card}>
-      <div className={PortfolioCardStyles.title}>
+      {/* <div > */}
+      <a
+        className={PortfolioCardStyles.title}
+        href={url}
+        rel="noreferrer"
+        target="_blank"
+      >
         <h2>{name}</h2>
-      </div>
+      </a>
       <div className={PortfolioCardStyles.description}>
         <p>{description}</p>
       </div>

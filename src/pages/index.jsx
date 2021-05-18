@@ -68,7 +68,7 @@ const indexPage = ({ data }) => {
           </h1>
           <h2 style={{ fontWeight: 100 }}>
             I'm<span style={{ fontWeight: 800 }}> Lane Garner,</span>
-            <br /> a full-stack developer
+            <br /> a front-end developer
             <br /> based in Austin, Texas.
           </h2>
           <p>
