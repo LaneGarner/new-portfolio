@@ -58,6 +58,7 @@ const Header = () => {
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
+              partiallyActive={true}
               to="/blog"
             >
               Blog

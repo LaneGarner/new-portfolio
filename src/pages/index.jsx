@@ -80,24 +80,28 @@ const indexPage = ({ data }) => {
           </p>
         </section>
       </div>
-      <div className={indexStyles.hireMe}>
-        <h2>Hire me</h2>
-        <p>
-          I am currently seeking full-time employment as a front-end developer.
-          I have experience working on a remote dev team and thrive in an agile
-          environment. I also offer freelance web development services to
-          clients. Let's work together to create your dream website or app.
-        </p>
-        <p>
-          <Link to="/portfolio">
-            <strong>Browse my portfolio</strong>
-          </Link>{" "}
-          as an introduction to my work or{" "}
-          <Link to="/contact">
-            <strong>get in touch</strong>
-          </Link>{" "}
-          to start a conversation.
-        </p>
+      <div className={indexStyles.diagonal}>
+        <div className={indexStyles.hireMe}>
+          <h2>Hire me</h2>
+          <p>
+            I am currently seeking full-time employment as a front-end
+            developer. I have experience working on a remote dev team and thrive
+            in an agile environment. I also offer freelance web development
+            services to clients. Let's work together to create your dream
+            website or app.
+          </p>
+          <p>
+            <Link to="/portfolio">
+              <strong>Browse my portfolio</strong>
+            </Link>{" "}
+            as an introduction to my work <br />
+            or{" "}
+            <Link to="/contact">
+              <strong>get in touch</strong>
+            </Link>{" "}
+            to start a conversation.
+          </p>
+        </div>
       </div>
       <div className={indexStyles.iBuild}>
         <div className={indexStyles.divOne}>I build</div>
@@ -167,7 +171,7 @@ const indexPage = ({ data }) => {
       <div className={indexStyles.bioCards}>
         <div>
           <div className={indexStyles.bulb}>
-            <IoInformationCircleOutline color="var(--react-blue)" size="9em" />
+            <IoInformationCircleOutline color="var(--react-blue)" size="7em" />
           </div>
           <p>
             I have a strong foundation in JavaScript (ES6+), CSS/SCSS, HTML,
@@ -176,17 +180,16 @@ const indexPage = ({ data }) => {
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <IoBulbOutline color="var(--js-yellow)" size="9em" />
+            <IoBulbOutline color="var(--js-yellow)" size="7em" />
           </div>
           <p>
-            I enjoy learning and working with technologies such as React, React
-            Native, Gatsby, Redux, GraphQL, and Firebase to build passion
-            projects.
+            I enjoy learning and working with tech such as React, React Native,
+            Gatsby, Redux, GraphQL, and Firebase to build passion projects.
           </p>
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <FaPaintBrush color="var(--node-green)" size="9em" />
+            <FaPaintBrush color="var(--js-yellow)" size="7em" />
           </div>
           <p>
             My work is design focused and my background as a musician inspires
@@ -195,11 +198,12 @@ const indexPage = ({ data }) => {
         </div>
         <div>
           <div className={indexStyles.bulb}>
-            <FaGraduationCap color="var(--gatsby-purple)" size="9em" />
+            <FaGraduationCap color="var(--react-blue)" size="7em" />
           </div>
           <p>
-            I recently completed a certification in Fullstack Web Development
-            from Austin Coding Academy.
+            I am always learning new things and pushing myself forward. I
+            believe in approaching topics with a growth mindset to learn all
+            that I can.
           </p>
         </div>
       </div>

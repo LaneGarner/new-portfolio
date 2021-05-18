@@ -13,8 +13,8 @@ const AboutPage = () => {
       <section className={portfolioStyles.portfolioContainer}>
         <h1>Portfolio</h1>
         <p>
-          Here are some of my favorite projects that highlight a variety of tech
-          which I've worked with:
+          Here are some projects which highlight a variety of tech that I've
+          worked with:
         </p>
         <div className={portfolioStyles.portfolioCardContainer}>
           <PortfolioCard

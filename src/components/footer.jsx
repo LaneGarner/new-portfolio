@@ -54,7 +54,7 @@ const Footer = () => {
           © {new Date().getFullYear()}, {data.site.siteMetadata.author}.
         </span>
         <span>
-          Created with{" "}
+          Built with{" "}
           <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
             GatsbyJS
           </a>{" "}

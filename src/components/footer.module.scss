@@ -8,10 +8,12 @@
     color: var(--lightest-grey);
     width: 1em;
     transition: all 0.2s ease-in;
-    font-size: 0.8em;
     padding: 0.8em 4em;
     &:hover {
       color: var(--js-yellow);
+    }
+    &:nth-of-type(2):hover {
+      color: var(--react-blue);
     }
   }
   div {
@@ -28,7 +30,7 @@
     }
   }
   .second-footer {
-    font-size: 0.8em;
+    // font-size: 0.8em;
     background-color: var(--black);
     width: 100vw;
     display: flex;

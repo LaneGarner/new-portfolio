@@ -34,29 +34,31 @@ export const query = graphql`
 const Blog = ({ data }) => {
   return (
     <Layout>
-      <Head title={data.markdownRemark.frontmatter.title} />
       <div className={blogPostStyles.blogPostContainer}>
-        <h1 className={blogPostStyles.title}>
-          {data.markdownRemark.frontmatter.title}
-        </h1>
-        <p className={blogPostStyles.date}>
-          {data.markdownRemark.frontmatter.date}
-        </p>
-        <GatsbyImage
-          image={getImage(
-            data.markdownRemark.frontmatter.featuredImage.childImageSharp
-              .gatsbyImageData
-          )}
-          alt="Banner"
-          // className={blogStyles.blogImg}
-        />
+        <div className={blogPostStyles.blogHead}>
+          <h1 className={blogPostStyles.title}>
+            {data.markdownRemark.frontmatter.title}
+          </h1>
+          <p className={blogPostStyles.date}>
+            {data.markdownRemark.frontmatter.date}
+          </p>
+          <GatsbyImage
+            image={getImage(
+              data.markdownRemark.frontmatter.featuredImage.childImageSharp
+                .gatsbyImageData
+            )}
+            alt="Banner"
+            className={blogPostStyles.blogImg}
+          />
+        </div>
 
         <div
+          className={blogPostStyles.blogContent}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         ></div>
-        <Link to="/blog">
+        <Link className={blogPostStyles.backButton} to="/blog">
           <FaArrowCircleLeft />
-          Back to posts
+          Back to all posts
         </Link>
       </div>
     </Layout>

@@ -1,12 +1,17 @@
 .header {
   padding-top: 1rem;
   a {
-    font-family: monospace;
+    // font-family: monospace;
     text-decoration: none;
   }
   a:hover {
     color: #666;
   }
+}
+
+header {
+  position: relative;
+  z-index: 101;
 }
 
 nav {
@@ -16,7 +21,7 @@ nav {
   z-index: 100;
   padding: 0.1em;
   a {
-    font-family: monospace;
+    // font-family: monospace;
     text-decoration: none;
   }
   a:hover {
@@ -27,7 +32,7 @@ nav {
 .title {
   color: var(--dark-grey);
   font-size: 2rem;
-  font-family: sans-serif;
+  // font-family: sans-serif;
 }
 
 .nav-list {
@@ -59,4 +64,15 @@ nav {
 
 .logo {
   margin: 0.2rem auto 0.9rem;
+}
+
+.header-container::after {
+  width: 78%;
+  max-width: 27em;
+  min-width: 8em;
+  height: 0.45em;
+  border-radius: 1px;
+  z-index: -1;
+  background: var(--js-yellow);
+  content: "";
 }
