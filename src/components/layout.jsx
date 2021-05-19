@@ -10,7 +10,7 @@ const Layout = props => {
     <div className="layout-container">
       <div className="layout-content">
         <Header />
-        <div className="layout-main">{props.children}</div>
+        <main className="layout-main">{props.children}</main>
       </div>
       <Footer />
     </div>
