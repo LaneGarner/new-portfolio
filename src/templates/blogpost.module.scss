@@ -11,12 +11,14 @@
   .title {
     font-size: 2.5em;
     text-align: center;
-    width: 50%;
+    width: 13em;
+    line-height: 0.8em;
   }
 
   .date {
     font-size: 1.3em;
     text-align: center;
+    margin-top: 5px;
     color: var(--lighter-grey);
   }
 
@@ -30,7 +32,7 @@
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   .back-button {
@@ -38,6 +40,10 @@
     display: flex;
     align-items: center;
     color: var(--light-grey);
+    position: fixed;
+    z-index: 1000;
+    margin-top: 300px;
+    top: 0;
     svg {
       margin-right: 0.5em;
       color: var(--dark-grey);

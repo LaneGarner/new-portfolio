@@ -36,7 +36,7 @@ h1 {
 .right {
   display: flex;
   flex-direction: column;
-  margin: 2em;
+  margin: 0.8em 2em 2em;
   min-width: 300px;
   margin-left: 2em;
 }
@@ -69,7 +69,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 5em;
+  padding-bottom: 4em;
   div {
     // font-family: monospace;
     // font-size: 0.93em;
@@ -115,6 +115,7 @@ h1 {
   margin: 0 auto;
   transform: skewY(3deg);
   color: white;
+  animation: fadeIn 2s;
   a {
     color: var(--js-yellow);
     text-decoration-color: white;
@@ -128,11 +129,56 @@ h1 {
     font-size: 4em;
     color: var(--react-blue);
     text-align: right;
-    margin-right: 2.2em;
+    margin-right: 4.2em;
   }
   p {
     // font-family: monospace;
     font-size: 1.2em;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

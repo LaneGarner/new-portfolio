@@ -58,7 +58,7 @@ const Blog = ({ data }) => {
         ></div>
         <Link className={blogPostStyles.backButton} to="/blog">
           <FaArrowCircleLeft />
-          Back to all posts
+          Back
         </Link>
       </div>
     </Layout>

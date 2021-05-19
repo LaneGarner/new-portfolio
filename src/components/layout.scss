@@ -28,6 +28,12 @@ $red: #bb2b11;
   --figma-blue: #19b6f5;
 }
 
+* {
+  ::selection {
+    background-color: var(--react-blue);
+  }
+}
+
 .layout-container {
   margin: 0 auto;
   display: flex;
