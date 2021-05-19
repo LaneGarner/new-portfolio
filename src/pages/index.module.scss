@@ -19,7 +19,19 @@ h1 {
     // font-family: monospace;
     font-size: 1.2rem;
   }
+  a {
+    text-decoration-color: var(--react-blue);
+  }
 }
+
+// .icons {
+//   display: flex;
+//   flex-direction: column;
+//   justify-items: center;
+//   svg:nth-of-type(0) {
+//     background: red;
+//   }
+// }
 
 .right {
   display: flex;
@@ -47,44 +59,8 @@ h1 {
   }
   .div-two {
     font-size: 0.6em;
-  }
-}
-
-.about-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #fafafa;
-  padding-bottom: 3em;
-  div {
-    display: inline;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .icon {
-    margin: 0.4em;
-  }
-  div[tooltip] {
-    position: relative;
-  }
-  div[tooltip]::after {
-    content: attr(tooltip);
-    position: absolute;
-    bottom: 50%;
-    left: 0;
-    background: #555;
-    color: white;
-    font-size: 0.8em;
-    white-space: nowrap;
-    z-index: 100;
-    padding: 0.3em;
-    border-radius: 0.5em;
-    transform: scale(0);
-    transition: transform ease-out 150ms, bottom ease-out 150ms;
-  }
-  div[tooltip]:hover::after {
-    transform: scale(1);
-    bottom: 4.3em;
+    text-align: center;
+    line-height: 1em;
   }
 }
 

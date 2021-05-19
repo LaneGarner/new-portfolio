@@ -51,7 +51,7 @@ const Footer = () => {
       </div>
       <div className={footerStyles.secondFooter}>
         <span className={footerStyles.copyright}>
-          © {new Date().getFullYear()}, {data.site.siteMetadata.author}.
+          © {new Date().getFullYear()} {data.site.siteMetadata.author}.
         </span>
         <span>
           Built with{" "}
