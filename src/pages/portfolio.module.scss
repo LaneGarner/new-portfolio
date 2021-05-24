@@ -1,7 +1,7 @@
 .portfolio-container {
   display: flex;
   flex-direction: column;
-  display: center;
+  align-items: center;
   padding-bottom: 4rem;
   h1 {
     margin-bottom: 0.3em;
@@ -13,6 +13,7 @@
   p {
     // font-family: sans-serif;
     text-align: center;
+    max-width: 30em;
   }
   a {
     text-decoration: none;

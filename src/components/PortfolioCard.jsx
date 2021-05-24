@@ -5,10 +5,9 @@ import { GoBrowser } from "react-icons/go"
 
 import * as PortfolioCardStyles from "./PortfolioCard.module.scss"
 
-export const PortfolioCard = ({ name, description, uses, url, github }) => {
+export const PortfolioCard = ({ name, description, img, uses, url, github }) => {
   return (
     <div className={PortfolioCardStyles.card}>
-      {/* <div > */}
       <a
         className={PortfolioCardStyles.title}
         href={url}
@@ -20,9 +19,17 @@ export const PortfolioCard = ({ name, description, uses, url, github }) => {
       <div className={PortfolioCardStyles.description}>
         <p>{description}</p>
       </div>
-      {/* <div className={PortfolioCardStyles.div3}> */}
-      <div className={PortfolioCardStyles.preview}></div>
-      {/* </div> */}
+        <div className={PortfolioCardStyles.preview}>
+      <a
+        className={PortfolioCardStyles.title}
+        href={url}
+        rel="noreferrer"
+        target="_blank"
+      >
+          {img}
+      </a>
+        </div>
+      
       <div className={PortfolioCardStyles.uses}>
         <p>{uses}</p>
       </div>

@@ -49,7 +49,6 @@ h1 {
   color: var(--dark-grey);
   padding-top: 1.5em;
   padding-bottom: 0.3em;
-  // font-family: monospace;
   font-size: 5em;
   div {
     margin-bottom: 0.5em;
@@ -64,77 +63,9 @@ h1 {
   }
 }
 
-.bio-cards {
-  background: #fafafa;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 4em;
-  div {
-    // font-family: monospace;
-    // font-size: 0.93em;
-    // text-align: center;
-    color: var(--dark-grey);
-    background: #fff;
-    width: 25em;
-    margin: 2rem 3rem;
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
-  }
-  p {
-    margin: auto;
-    padding: 0 1.2em 1em 1.2em;
-  }
-  div:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.11);
-  }
-  .bulb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    height: 11em;
-  }
-  .bulb:hover {
-    box-shadow: none;
-  }
-  h3 {
-    // font-family: monospace;
-    font-size: 3em;
-  }
-}
 
 .hire-me {
-  padding: 4rem 8rem;
-  // background-color: var(--dark-grey);
-  max-width: 70em;
-  margin: 0 auto;
-  transform: skewY(3deg);
-  color: white;
-  animation: fadeIn 2s;
-  a {
-    color: var(--js-yellow);
-    text-decoration-color: white;
-  }
-  a:hover {
-    color: var(--lightest-grey);
-    text-decoration-color: var(--js-yellow);
-  }
-  h2 {
-    // font-family: monospace;
-    font-size: 4em;
-    color: var(--react-blue);
-    text-align: right;
-    margin-right: 4.2em;
-  }
-  p {
-    // font-family: monospace;
-    font-size: 1.2em;
-  }
+  
 }
 
 @keyframes fadeIn {
@@ -183,17 +114,5 @@ h1 {
 }
 
 .diagonal {
-  // padding: 1em;
-  transform: skewY(-3deg);
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

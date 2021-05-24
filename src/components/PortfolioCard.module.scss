@@ -45,11 +45,15 @@
 // }
 
 .preview {
-  background-color: white;
-  width: 400px;
-  height: 250px;
-  border-radius: 1em;
-  margin: 2em auto;
+  grid-area: 3 / 2 / 4 / 4;
+  transition: all .2s ease-in-out;
+  &:hover { transform: scale(1.1); }
+  // border-radius: 2em;
+  // background-color: white;
+  // width: 400px;
+  // height: 250px;
+  // border-radius: 1em;
+  // margin: 2em auto;
 }
 
 .card {
@@ -79,9 +83,10 @@
     grid-area: 2 / 2 / 3 / 4;
     font-size: 1.1em;
   }
-  .preview {
-    grid-area: 3 / 2 / 4 / 4;
-  }
+  // .preview {
+  //   grid-area: 3 / 2 / 4 / 4;
+  //   padding: 0;
+  // }
   .uses {
     grid-area: 4 / 2 / 5 / 4;
     font-size: 1.1em;
@@ -99,6 +104,7 @@
     color: var(--lighter-grey);
     margin-bottom: 2em;
     transition: all 0.2s ease-in;
+    font-size: 1em;
     svg {
       margin-bottom: 0.2em;
     }
