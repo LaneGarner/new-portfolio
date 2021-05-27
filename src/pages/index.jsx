@@ -11,11 +11,9 @@ import Transition from "../components/Transition"
 import { HireMe } from "../components/HireMe"
 import ReactTypingEffect from "react-typing-effect"
 
-import styled from "styled-components";
+import styled from "styled-components"
 
 import * as indexStyles from "./index.module.scss"
-
-
 
 export const query = graphql`
   query myProfilePic {
@@ -27,6 +25,10 @@ export const query = graphql`
       }
     }
   }
+`
+
+const BottomContentWrapper = styled.section`
+  background: var(--lightest-grey);
 `
 
 const indexPage = ({ data }) => {
@@ -72,22 +74,21 @@ const indexPage = ({ data }) => {
         </section>
       </div>
 
+      <BottomContentWrapper>
+        <HireMe />
 
-      <HireMe />
-
-
-
-      <div className={indexStyles.iBuild}>
-        <div className={indexStyles.divOne}>I build</div>
-        <Transition />
-        <div className={indexStyles.divTwo}>
-          websites
-          <br /> and
-          <br /> applications
+        <div className={indexStyles.iBuild}>
+          <div className={indexStyles.divOne}>I build</div>
+          <Transition />
+          <div className={indexStyles.divTwo}>
+            websites
+            <br /> and
+            <br /> applications
+          </div>
         </div>
-      </div>
-      <Icons />
-      <BioCards />
+        <Icons />
+        <BioCards />
+      </BottomContentWrapper>
     </Layout>
   )
 }

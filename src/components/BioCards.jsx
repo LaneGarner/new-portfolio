@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react"
 import { IoBulbOutline, IoInformationCircleOutline } from "react-icons/io5"
 import { FaGraduationCap, FaPaintBrush } from "react-icons/fa"
 
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const BioCardSection = styled.section`
-  background: #fafafa;
+  /* background: #fafafa; */
 
   /* display: flex;
   flex-wrap: wrap;
@@ -15,7 +15,7 @@ const BioCardSection = styled.section`
   grid-template-rows: repeat(2, 1fr);
   place-items: center;
   margin: auto;
-  width: 70em;
+  width: 70%;
 
   padding-bottom: 4em;
   .card {
@@ -63,38 +63,49 @@ const BioCardSection = styled.section`
   h3 {
     font-size: 3em;
   }
-`;
+`
+
+const BioCardWrapper = styled.section`
+  width: 100%;
+  /* background: #fafafa; */
+`
 
 export const BioCards = () => {
   const cards = [
     {
-      component: <IoInformationCircleOutline color="var(--react-blue)" size="7em" />,
-      copy: "I have a strong foundation in JavaScript (ES6+), CSS/SCSS, HTML, mySQL, Node.js, Express, and more.",
+      component: (
+        <IoInformationCircleOutline color="var(--react-blue)" size="7em" />
+      ),
+      copy:
+        "I have a strong foundation in JavaScript (ES6+), CSS/SCSS, HTML, mySQL, Node.js, Express, and more.",
     },
     {
       component: <IoBulbOutline color="var(--js-yellow)" size="7em" />,
-      copy: "I enjoy learning and working with tech such as React, React Native, Gatsby, Redux, GraphQL, and Firebase to build passion projects.",
+      copy:
+        "I enjoy learning and working with tech such as React, React Native, Gatsby, Redux, GraphQL, and Firebase to build passion projects.",
     },
     {
       component: <FaPaintBrush color="var(--js-yellow)" size="7em" />,
-      copy: "My work is design focused and my background as a musician inspires creativity throughout the development process."
+      copy:
+        "My work is design focused and my background as a musician inspires creativity throughout the development process.",
     },
     {
-      component:  <FaGraduationCap color="var(--react-blue)" size="7em" />,
-      copy: "I am always learning new things and pushing myself forward. I believe in approaching topics with a growth mindset to learn all that I can.",
+      component: <FaGraduationCap color="var(--react-blue)" size="7em" />,
+      copy:
+        "I am always learning new things and pushing myself forward. I believe in approaching topics with a growth mindset to learn all that I can.",
     },
   ]
 
   return (
-    <BioCardSection>
-      {cards.map((card, index) => (
-        <div className="card" key={index}>
-          <div className="bulb">
-            {card.component}
+    <BioCardWrapper>
+      <BioCardSection>
+        {cards.map((card, index) => (
+          <div className="card" key={index}>
+            <div className="bulb">{card.component}</div>
+            <p>{card.copy}</p>
           </div>
-          <p>{card.copy}</p>
-        </div>
-      ))}
-    </BioCardSection>
+        ))}
+      </BioCardSection>
+    </BioCardWrapper>
   )
 }
