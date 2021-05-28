@@ -24,7 +24,7 @@ const HeroContainer = styled.div`
     min-width: 300px;
     margin-left: 2em;
     color: ${props =>
-      props.theme === "dark" ? "var(--white)" : "var(--black)"};
+      props.theme === "dark" ? "var(--lightest-grey)" : "var(--black)"};
   }
   .hello {
     font-size: 4rem;

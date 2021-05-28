@@ -3,10 +3,9 @@ import styled from "styled-components"
 
 import Header from "./Header"
 import Footer from "./footer"
-import { MainLayout } from "./MainLayout"
 import "../styles/index.scss"
 import "./layout-styles.scss"
-import { ContextProvider } from "../context/ThemeContext"
+// import { ContextProvider } from "../context/ThemeContext"
 
 const LayoutContainer = styled.div`
   margin: 0 auto;
@@ -21,13 +20,13 @@ const LayoutContainer = styled.div`
 
 const Layout = props => {
   return (
-    <ContextProvider>
-      <LayoutContainer>
-        <Header />
-        <main>{props.children}</main>
-        <Footer />
-      </LayoutContainer>
-    </ContextProvider>
+    // <ContextProvider>
+    <LayoutContainer>
+      <Header />
+      <main>{props.children}</main>
+      <Footer />
+    </LayoutContainer>
+    // </ContextProvider>
   )
 }
 

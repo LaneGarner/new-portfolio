@@ -7,20 +7,19 @@ import { ThemeContext } from "../context/ThemeContext"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    /* background-color: ${props =>
-      props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
+    background-color: ${props =>
+      props.theme === "dark" ? "var(--black)" : "var(--white)"};
   }
 `
 
 const Top = styled.header`
   padding-top: 1rem;
-  /* background: ${props =>
-    props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
+  background: ${props =>
+    props.theme === "dark" ? "var(--black)" : "var(--white)"};
   position: relative;
   z-index: 1002;
 
   .title {
-    color: var(--dark-grey);
     font-size: 2rem;
     position: relative;
   }
@@ -51,6 +50,8 @@ const Top = styled.header`
 
   a {
     text-decoration: none;
+    color: ${props =>
+      props.theme === "dark" ? "var(--lightest-grey)" : "var(--dark-grey)"};
   }
 
   a:hover {
@@ -62,8 +63,8 @@ const Nav = styled.nav`
   position: sticky;
   top: 0;
   background: white;
-  /* background: ${props =>
-    props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
+  background: ${props =>
+    props.theme === "dark" ? "var(--black)" : "var(--white)"};
   z-index: 1001;
   padding: 0.1em;
   display: flex;
@@ -83,17 +84,17 @@ const Nav = styled.nav`
     }
   }
   .active-nav-item {
-    /* color: ${props =>
-      props.theme === "dark" ? "var(--light-grey)" : "var(--dark-grey)"}; */
+    color: ${props =>
+      props.theme === "dark" ? "var(--lightest-grey)" : "var(--dark-grey)"};
   }
 `
 
 const Header = () => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, setTheme, toggleTheme } = useContext(ThemeContext)
 
-  const toggleTheme = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light")
-  }
+  // const toggleTheme = () => {
+  //   theme === "light" ? setTheme("dark") : setTheme("light")
+  // }
 
   useEffect(() => {
     console.log(theme)
@@ -114,7 +115,7 @@ const Header = () => {
       <Top theme={theme}>
         <div className="title">
           <div className="header-container">
-            <div className="logo">
+            <div onClick={toggleTheme} className="logo">
               <Logo width="122.3365" height="92.13775" />
             </div>
             <div style={{ fontWeight: "800" }}>
