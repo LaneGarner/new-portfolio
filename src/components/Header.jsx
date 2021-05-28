@@ -5,17 +5,17 @@ import styled, { createGlobalStyle } from "styled-components"
 import Logo from "./Logo"
 import { ThemeContext } from "../context/ThemeContext"
 
-// const GlobalStyle = createGlobalStyle`
-//   body {
-//     background-color: ${props =>
-//       props.theme === "dark" ? "var(--black)" : "var(--white)"};
-//   }
-// `
+const GlobalStyle = createGlobalStyle`
+  body {
+    /* background-color: ${props =>
+      props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
+  }
+`
 
 const Top = styled.header`
   padding-top: 1rem;
-  background: ${props =>
-    props.theme === "dark" ? "var(--black)" : "var(--white)"};
+  /* background: ${props =>
+    props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
   position: relative;
   z-index: 1002;
 
@@ -61,8 +61,9 @@ const Top = styled.header`
 const Nav = styled.nav`
   position: sticky;
   top: 0;
-  background: ${props =>
-    props.theme === "dark" ? "var(--black)" : "var(--white)"};
+  background: white;
+  /* background: ${props =>
+    props.theme === "dark" ? "var(--black)" : "var(--white)"}; */
   z-index: 1001;
   padding: 0.1em;
   display: flex;
@@ -82,8 +83,8 @@ const Nav = styled.nav`
     }
   }
   .active-nav-item {
-    color: ${props =>
-      props.theme === "dark" ? "var(--light-grey)" : "var(--dark-grey)"};
+    /* color: ${props =>
+      props.theme === "dark" ? "var(--light-grey)" : "var(--dark-grey)"}; */
   }
 `
 
@@ -105,7 +106,7 @@ const Header = () => {
   `)
   return (
     <>
-      {/* <GlobalStyle theme={theme} /> */}
+      <GlobalStyle theme={theme} />
       <Top theme={theme}>
         <div className="title">
           <div className="header-container">
