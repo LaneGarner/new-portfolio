@@ -14,6 +14,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.0.0",
     "gatsby-image": "^3.5.0",
     "gatsby-plugin-image": "^1.0.0",
@@ -21,6 +22,7 @@
     "gatsby-plugin-react-helmet": "^4.0.0",
     "gatsby-plugin-sass": "^4.0.0",
     "gatsby-plugin-sharp": "^3.5.0",
+    "gatsby-plugin-styled-components": "^4.6.0",
     "gatsby-remark-images": "^4.0.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^3.0.0",
