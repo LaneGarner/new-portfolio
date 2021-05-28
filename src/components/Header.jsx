@@ -5,12 +5,12 @@ import styled, { createGlobalStyle } from "styled-components"
 import Logo from "./Logo"
 import { ThemeContext } from "../context/ThemeContext"
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${props =>
-      props.theme === "dark" ? "var(--black)" : "var(--white)"};
-  }
-`
+// const GlobalStyle = createGlobalStyle`
+//   body {
+//     background-color: ${props =>
+//       props.theme === "dark" ? "var(--black)" : "var(--white)"};
+//   }
+// `
 
 const Top = styled.header`
   padding-top: 1rem;
@@ -105,7 +105,7 @@ const Header = () => {
   `)
   return (
     <>
-      <GlobalStyle theme={theme} />
+      {/* <GlobalStyle theme={theme} /> */}
       <Top theme={theme}>
         <div className="title">
           <div className="header-container">
