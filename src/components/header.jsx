@@ -90,8 +90,14 @@ const Nav = styled.nav`
 `
 
 const Header = () => {
-  const { theme, setTheme, toggleTheme } = useContext(ThemeContext)
-
+  // const { theme, setTheme, toggleTheme } = useContext(ThemeContext)
+  const theme = "dark"
+  const setTheme = () => {
+    console.log("hey")
+  }
+  const toggleTheme = () => {
+    console.log("hey")
+  }
   // const toggleTheme = () => {
   //   theme === "light" ? setTheme("dark") : setTheme("light")
   // }

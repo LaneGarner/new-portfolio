@@ -45,7 +45,14 @@ const HeroContainer = styled.div`
 `
 
 export const Hero = () => {
-  const { theme } = useContext(ThemeContext)
+  // const { theme } = useContext(ThemeContext)
+  const theme = "dark"
+  const setTheme = () => {
+    console.log("hey")
+  }
+  const toggleTheme = () => {
+    console.log("hey")
+  }
   return (
     <HeroContainer theme={theme}>
       <section className="left-content">
