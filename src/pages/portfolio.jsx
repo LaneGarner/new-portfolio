@@ -1,13 +1,48 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Head from "../components/head"
 import { PortfolioCard } from "../components/PortfolioCard"
 
-import * as portfolioStyles from "./portfolio.module.scss"
+// import * as portfolioStyles from "./portfolio.module.scss"
 
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
-import { graphql } from "gatsby";
+import { graphql } from "gatsby"
+
+import styled from "styled-components"
+
+const PortfolioContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  h1 {
+    margin-bottom: 0.3em;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    max-width: 30em;
+  }
+  a {
+    text-decoration: none;
+  }
+`
+const PortfolioCardContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
+
+// .portfolio-container {
+// }
+
+// .portfolio-card-container {
+
+// }
 
 const GarnerGuitarPreview = () => {
   return (
@@ -44,34 +79,34 @@ const DraftrrPreview = () => {
 }
 
 export const query = graphql`
-query PreviewPic {
-  allFile {
-    nodes {
-      id
-      childImageSharp {
-        gatsbyImageData
+  query PreviewPic {
+    allFile {
+      nodes {
+        id
+        childImageSharp {
+          gatsbyImageData
+        }
       }
     }
   }
-}
 `
 
-const AboutPage = ({data}) => {
+const AboutPage = ({ data }) => {
   console.log("data: ", data)
   return (
     <Layout>
       <Head title="Portfolio" />
-      <section className={portfolioStyles.portfolioContainer}>
+      <PortfolioContainer>
         <h1>Portfolio</h1>
         <p>
-          Some projects that demonstrate my style and highlight a variety of tech I've
-          worked with:
+          Some projects that demonstrate my style and highlight a variety of
+          tech I've worked with:
         </p>
-        <div className={portfolioStyles.portfolioCardContainer}>
+        <PortfolioCardContainer>
           <PortfolioCard
             name="Shedr"
             description="Musician’s practice toolkit web app"
-            img={<ShedrPreview/>}
+            img={<ShedrPreview />}
             uses="React, Node.js, SCSS, &#38; Firebase"
             url="https://shedr.app"
             github="https://github.com/LaneGarner/shedr"
@@ -79,7 +114,7 @@ const AboutPage = ({data}) => {
           <PortfolioCard
             name="Garner Guitar"
             description="Online guitar instruction content, courses, and advertising materials for lessons"
-            img={<GarnerGuitarPreview/>}
+            img={<GarnerGuitarPreview />}
             uses="Static site built with JavaScript, HTML, &#38; CSS"
             url="https://garnerguitar.com"
             github="https://github.com/LaneGarner/GarnerGuitar"
@@ -95,7 +130,7 @@ const AboutPage = ({data}) => {
           <PortfolioCard
             name="Draftrr"
             description="Draftrr is a writing application that encourages finishing the first draft"
-            img={<DraftrrPreview/>}
+            img={<DraftrrPreview />}
             uses="Built with remote team using React, Bootstrap, MySQL, &#38; MongoDB"
             url="https://draftrr.com"
             github="https://github.com/theMVPshop/DT02/tree/main/draftrr-react"
@@ -107,8 +142,8 @@ const AboutPage = ({data}) => {
                     url=""
                     github=""
                 /> */}
-        </div>
-      </section>
+        </PortfolioCardContainer>
+      </PortfolioContainer>
     </Layout>
   )
 }

@@ -4,18 +4,20 @@ import { FaGraduationCap, FaPaintBrush } from "react-icons/fa"
 
 import styled from "styled-components"
 
-const BioCardSection = styled.section`
-  /* background: #fafafa; */
+const BioCardWrapper = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
+const BioCardSection = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   place-items: center;
   margin: auto;
-  width: 70%;
+  /* width: 70%; */
 
   padding-bottom: 4em;
   .card {
@@ -63,11 +65,6 @@ const BioCardSection = styled.section`
   h3 {
     font-size: 3em;
   }
-`
-
-const BioCardWrapper = styled.section`
-  width: 100%;
-  /* background: #fafafa; */
 `
 
 export const BioCards = () => {

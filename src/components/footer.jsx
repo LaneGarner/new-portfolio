@@ -1,9 +1,59 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-
-import * as footerStyles from "./footer.module.scss"
-
 import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si"
+import styled from "styled-components"
+
+const FooterContainer = styled.footer`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--darker-grey);
+  margin-bottom: 0;
+  color: var(--lightest-grey);
+  padding: 0.5em 4em 0;
+  a {
+    text-decoration: none;
+    color: var(--lightest-grey);
+    width: 1em;
+    transition: all 0.2s ease-in;
+    padding: 0.8em 4em;
+    &:hover {
+      color: var(--js-yellow);
+    }
+    &:nth-of-type(2):hover {
+      color: var(--react-blue);
+    }
+  }
+  div {
+    display: flex;
+  }
+  .copyright {
+    color: #a4a4a4;
+  }
+  span:nth-of-type(2) {
+    padding-left: 0.5em;
+    a {
+      font-size: 1em;
+      padding: 0;
+    }
+  }
+  .second-footer {
+    font-size: 0.9em;
+    background-color: var(--black);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0.5em;
+    padding-bottom: 1em;
+    a:nth-of-type(1):hover {
+      color: var(--gatsby-purple);
+    }
+    a:nth-of-type(2):hover {
+      color: var(--sass-pink);
+    }
+  }
+`
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -16,7 +66,7 @@ const Footer = () => {
     }
   `)
   return (
-    <footer className={`${footerStyles.footer} flex-center`}>
+    <FooterContainer>
       <div>
         <a
           href="https://github.com/LaneGarner"
@@ -49,8 +99,8 @@ const Footer = () => {
           </div>
         </a>
       </div>
-      <div className={footerStyles.secondFooter}>
-        <span className={footerStyles.copyright}>
+      <div className="second-footer">
+        <span className="copyright">
           © {new Date().getFullYear()} {data.site.siteMetadata.author}.
         </span>
         <span>
@@ -64,7 +114,7 @@ const Footer = () => {
           </a>
         </span>
       </div>
-    </footer>
+    </FooterContainer>
   )
 }
 

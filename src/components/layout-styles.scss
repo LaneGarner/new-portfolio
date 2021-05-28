@@ -5,13 +5,15 @@ $brown: #7f6d58;
 $red: #bb2b11;
 
 :root {
-  --black: #121212;
+  // --black: #121212;
+  --black: #000000;
+  --white: #ffffff;
   --darkest-grey: #222;
   --darker-grey: #272727;
   --dark-grey: #333;
   --light-grey: #666;
   --lighter-grey: #999;
-  --lightest-grey: #fafafa;
+  --lightest-grey: #f4f4f4;
   --react-blue: #60dbfb;
   --js-yellow: #fcdc00;
   --css-blue: #2299f8;
@@ -26,28 +28,38 @@ $red: #bb2b11;
   --firebase-yellow: #f7c52b;
   --adobe-red: #f30f01;
   --figma-blue: #19b6f5;
+
+  --magic-number: 0.09719;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+  --clip-padding: calc(var(--full-width) * var(--magic-number));
 }
 
 * {
   ::selection {
-    background-color: var(--react-blue);
+    background-color: var(--js-yellow);
   }
 }
 
-.layout-container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  // font-family: monospace;
+html,
+body {
+  scroll-snap-type: y proximity;
 }
 
-.layout-content {
-  flex-grow: 1;
-}
+// .layout-container {
+//   margin: 0 auto;
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   // font-family: monospace;
+// }
+
+// .layout-content {
+//   flex-grow: 1;
+// }
 
 .layout-main {
   // padding-bottom: 3rem;
+  // background: white;
 }
 
 .shadow {

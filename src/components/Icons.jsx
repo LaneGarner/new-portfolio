@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 
 import {
   SiJavascript,
@@ -9,7 +10,6 @@ import {
   SiGatsby,
   SiFirebase,
   SiBootstrap,
-  SiAdobe,
   SiRedux,
   SiSass,
   SiFigma,
@@ -18,7 +18,53 @@ import {
 
 import { FaNode } from "react-icons/fa"
 
-import * as iconStyles from "./icons.module.scss"
+const AboutIcons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3em;
+  .row {
+    display: inline;
+    display: flex;
+  }
+  .icon {
+    margin: 2em 1em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .icon[tooltip] {
+    position: relative;
+  }
+  .icon[tooltip]::before {
+    content: attr(tooltip);
+    position: absolute;
+    margin-top: 20px;
+    background: #555;
+    color: white;
+    font-size: 0.8em;
+    white-space: nowrap;
+    z-index: 100;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    transform: scale(0) translateY(20px);
+    transition: transform ease-out 150ms, bottom ease-out 150ms;
+  }
+  .icon[tooltip]:hover::before {
+    transform: scale(1) translateY(46px);
+  }
+  .react-icon {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`
 
 export const Icons = () => {
   const iconList = [
@@ -27,7 +73,7 @@ export const Icons = () => {
         name: "React and React Native",
         icon: (
           <SiReact
-            className={iconStyles.reactIcon}
+            className="react-icon"
             size="4em"
             color="var(--react-blue)"
           />
@@ -93,48 +139,33 @@ export const Icons = () => {
   ]
 
   return (
-    <div className={iconStyles.aboutIcons}>
+    <AboutIcons>
       {iconList[0].map(icon => (
-        <div key={icon.name} tooltip={icon.name} className={iconStyles.icon}>
+        <div key={icon.name} tooltip={icon.name} className="icon">
           {icon.icon}
         </div>
       ))}
-      <div className={iconStyles.row}>
+      <div className="row">
         {iconList[1].map(icon => (
-          <div key={icon.name} tooltip={icon.name} className={iconStyles.icon}>
+          <div key={icon.name} tooltip={icon.name} className="icon">
             {icon.icon}
           </div>
         ))}
       </div>
-      <div className={iconStyles.row}>
+      <div className="row">
         {iconList[2].map(icon => (
-          <div key={icon.name} tooltip={icon.name} className={iconStyles.icon}>
+          <div key={icon.name} tooltip={icon.name} className="icon">
             {icon.icon}
           </div>
         ))}
       </div>
-      <div className={iconStyles.row}>
+      <div className="row">
         {iconList[3].map(icon => (
-          <div key={icon.name} tooltip={icon.name} className={iconStyles.icon}>
+          <div key={icon.name} tooltip={icon.name} className="icon">
             {icon.icon}
           </div>
         ))}
       </div>
-      {/* <div>
-        {iconList.map(
-          icon =>
-            icon === iconList[1] &&
-            icon === iconList[2] && (
-              <div
-                key={icon.name}
-                tooltip={icon.name}
-                className={iconStyles.icon}
-              >
-                {icon.icon}
-              </div>
-            )
-        )}
-      </div> */}
-    </div>
+    </AboutIcons>
   )
 }
