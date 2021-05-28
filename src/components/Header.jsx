@@ -109,7 +109,7 @@ const Header = () => {
       <Top theme={theme}>
         <div className="title">
           <div className="header-container">
-            <div onClick={toggleTheme} className="logo">
+            <div className="logo">
               <Logo width="122.3365" height="92.13775" />
             </div>
             <div style={{ fontWeight: "800" }}>
