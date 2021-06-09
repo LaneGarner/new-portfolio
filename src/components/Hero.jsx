@@ -34,7 +34,7 @@ export const Hero = () => {
           />
         </div>
         <p className="bio">
-          I'm<span style={{ fontWeight: 800 }}> Lane Garner,</span>
+          I'm<span style={{ fontWeight: 800 }}> Lane Garner</span>,
           <br /> a fullstack developer
           <br /> based in Austin, Texas.
         </p>

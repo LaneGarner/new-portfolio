@@ -40,7 +40,7 @@ export const BioCards = () => {
         {cards.map((card, index) => (
           <Card theme={theme} background={background}>
             <div className="card">
-              <div className="bulb">{card.component}</div>
+              <div className="card-icon">{card.component}</div>
               <p>{card.copy}</p>
             </div>
           </Card>
@@ -64,6 +64,10 @@ const BioCardContent = styled.div`
   place-items: center;
   margin: auto;
   padding-bottom: 4em;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+  }
   
     &:nth-of-type(2) {
       grid-area: 1 / 2 / 2 / 3;
@@ -78,13 +82,21 @@ const BioCardContent = styled.div`
   p {
     margin: auto;
     padding: 0 1.2em 1em 1.2em;
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
   .card {
     width: 25em;
     height: 20em;
+    @media (max-width: 650px) {
+      width: 90%;
+      height: auto;
+      margin: auto;
+    }
   }
   .card
-  .bulb {
+  .card-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,9 +105,11 @@ const BioCardContent = styled.div`
     margin: 0;
     padding: 0;
     height: 11em;
-    /* width: 2em; */
+    @media (max-width: 650px) {
+      height: 9em;
+    }
   }
-  .bulb:hover {
+  .card-icon:hover {
     box-shadow: none;
   }
   h3 {

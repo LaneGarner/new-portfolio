@@ -3,6 +3,83 @@ import { graphql, useStaticQuery } from "gatsby"
 import { SiTwitter, SiLinkedin, SiGithub } from "react-icons/si"
 import styled from "styled-components"
 
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
+
+  return (
+    <FooterContainer>
+      <div>
+        <a
+          href="https://github.com/LaneGarner"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex-center footer-icon">
+            <SiGithub size="2em" />
+            GitHub
+          </div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/lanegarner"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex-center footer-icon">
+            <SiLinkedin size="2em" />
+            LinkedIn
+          </div>
+        </a>
+        <a
+          href="https://twitter.com/lanegarner"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex-center footer-icon">
+            <SiTwitter size="2em" />
+            Twitter
+          </div>
+        </a>
+      </div>
+      <div className="second-footer">
+        <span className="copyright">
+          © {new Date().getFullYear()} {data.site.siteMetadata.author}.
+        </span>
+        <span>
+          <a
+            href="https://github.com/LaneGarner/new-portfolio"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Built
+          </a>{" "}
+          with{" "}
+          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
+            GatsbyJS
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://styled-components.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Styled Components.
+          </a>
+        </span>
+      </div>
+    </FooterContainer>
+  )
+}
+
+export default Footer
+
 const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
@@ -46,76 +123,19 @@ const FooterContainer = styled.footer`
     align-items: flex-end;
     padding: 0.5em;
     padding-bottom: 1em;
-    a:nth-of-type(1):hover {
-      color: var(--gatsby-purple);
+    a:nth-of-type(2):hover {
+      color: var(--js-yellow);
     }
     a:nth-of-type(2):hover {
+      color: var(--gatsby-purple);
+    }
+    a:nth-of-type(3):hover {
       color: var(--sass-pink);
+    }
+    @media (max-width: 600px) {
+      /* font-size: 0.8em; */
+      flex-direction: column;
+      align-items: center;
     }
   }
 `
-
-const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-        }
-      }
-    }
-  `)
-  return (
-    <FooterContainer>
-      <div>
-        <a
-          href="https://github.com/LaneGarner"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex-center footer-icon">
-            <SiGithub size="2em" />
-            GitHub
-          </div>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/lanegarner"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex-center footer-icon">
-            <SiLinkedin size="2em" />
-            LinkedIn
-          </div>
-        </a>
-        <a
-          href="https://twitter.com/lanegarner"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="flex-center footer-icon">
-            <SiTwitter size="2em" />
-            Twitter
-          </div>
-        </a>
-      </div>
-      <div className="second-footer">
-        <span className="copyright">
-          © {new Date().getFullYear()} {data.site.siteMetadata.author}.
-        </span>
-        <span>
-          Built with{" "}
-          <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
-            GatsbyJS
-          </a>{" "}
-          and{" "}
-          <a href="https://sass-lang.com/" target="_blank" rel="noreferrer">
-            SCSS.
-          </a>
-        </span>
-      </div>
-    </FooterContainer>
-  )
-}
-
-export default Footer

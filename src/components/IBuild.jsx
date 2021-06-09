@@ -1,5 +1,4 @@
 import React from "react"
-// import * as indexStyles from "../index.module.scss"
 import styled from "styled-components"
 
 import Transition from "./Transition"

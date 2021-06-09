@@ -1,12 +1,15 @@
 import React, { useContext, useEffect } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import styled, { createGlobalStyle } from "styled-components"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 
 import Logo from "./Logo"
 import { ThemeContext } from "../context/ThemeContext"
 
 const Header = () => {
   const { theme, setTheme, toggleTheme } = useContext(ThemeContext)
+
+  const breakpoints = useBreakpoint()
 
   const data = useStaticQuery(graphql`
     query {
@@ -28,13 +31,13 @@ const Header = () => {
             <div onClick={toggleTheme} className="logo">
               <Logo width="122.3365" height="92.13775" />
             </div>
-            <div style={{ fontWeight: "800" }}>
-              <Link to="/">
-                {data.site.siteMetadata.author}
-                <span style={{ fontWeight: "100" }}>
+            <div>
+              <Link className="title-container" to="/">
+                <span className="author">{data.site.siteMetadata.author}</span>
+                {breakpoints.md && <br />}
+                <span className="subtitle">
                   {" "}
-                  <wbr />
-                  {data.site.siteMetadata.subtitle} <wbr />
+                  {data.site.siteMetadata.subtitle} {breakpoints.sm && <br />}
                   {data.site.siteMetadata.subtitle2}
                 </span>
               </Link>
@@ -91,9 +94,42 @@ const Top = styled.header`
   position: relative;
   z-index: 1002;
 
+  .author {
+    font-weight: 800;
+    text-align: center;
+    @media (max-width: 1024px) {
+      font-size: clamp(
+        2.5rem,
+        1.8182rem + 3.4091vw,
+        4rem
+      ); /* font-size: 7vw; */
+    }
+  }
+
+  .subtitle {
+    font-weight: 100;
+    @media (max-width: 1024px) {
+      text-align: center;
+      font-size: 1.5rem;
+      transform: translateY(-10px);
+      /* line-height: 0.5em; */
+    }
+  }
+
   .title {
     font-size: 2rem;
     position: relative;
+  }
+
+  .title-container {
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    br {
+      line-height: 0;
+    }
   }
 
   .header-container {
@@ -118,6 +154,9 @@ const Top = styled.header`
     position: absolute;
     top: 70px;
     transform: skewY(0.5deg);
+    @media (max-width: 600px) {
+      width: 95%;
+    }
   }
 
   a {
