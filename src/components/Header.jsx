@@ -108,6 +108,7 @@ const Top = styled.header`
       text-align: center;
       font-size: 1.5rem;
       transform: translateY(5px);
+      /* test */
     }
   }
 
