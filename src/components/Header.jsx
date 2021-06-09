@@ -98,11 +98,7 @@ const Top = styled.header`
     font-weight: 800;
     text-align: center;
     @media (max-width: 1024px) {
-      font-size: clamp(
-        2.5rem,
-        1.8182rem + 3.4091vw,
-        4rem
-      ); /* font-size: 7vw; */
+      font-size: clamp(2.5rem, 1.8182rem + 3.4091vw, 4rem);
     }
   }
 
