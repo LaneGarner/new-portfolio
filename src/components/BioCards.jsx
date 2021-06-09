@@ -1,73 +1,14 @@
-import React from "react"
+import React, { useContext, useState } from "react"
 import { IoBulbOutline, IoInformationCircleOutline } from "react-icons/io5"
 import { FaGraduationCap, FaPaintBrush } from "react-icons/fa"
-
 import styled from "styled-components"
 
-const BioCardWrapper = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const BioCardSection = styled.section`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  place-items: center;
-  margin: auto;
-  /* width: 70%; */
-
-  padding-bottom: 4em;
-  .card {
-    color: var(--dark-grey);
-    background: #fff;
-    width: 25em;
-    height: 27em;
-    margin: 2rem 3rem;
-    border-radius: 1rem;
-    padding: 3rem;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
-    &:nth-of-type(1) {
-      grid-area: 1 / 1 / 2 / 2;
-    }
-    &:nth-of-type(2) {
-      grid-area: 1 / 2 / 2 / 3;
-    }
-    &:nth-of-type(3) {
-      grid-area: 2 / 1 / 3 / 2;
-    }
-    &:nth-of-type(4) {
-      grid-area: 2 / 2 / 3 / 3;
-    }
-  }
-  p {
-    margin: auto;
-    padding: 0 1.2em 1em 1.2em;
-  }
-  .card:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.11);
-  }
-  .bulb {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-    height: 11em;
-  }
-  .bulb:hover {
-    box-shadow: none;
-  }
-  h3 {
-    font-size: 3em;
-  }
-`
+import { Card } from "../components/Card"
+import { ThemeContext } from "../context/ThemeContext"
 
 export const BioCards = () => {
+  const { theme } = useContext(ThemeContext)
+  const [background] = useState("dark")
   const cards = [
     {
       component: (
@@ -94,15 +35,70 @@ export const BioCards = () => {
   ]
 
   return (
-    <BioCardWrapper>
-      <BioCardSection>
+    <BioCardContainer>
+      <BioCardContent>
         {cards.map((card, index) => (
-          <div className="card" key={index}>
-            <div className="bulb">{card.component}</div>
-            <p>{card.copy}</p>
-          </div>
+          <Card theme={theme} background={background}>
+            <div className="card">
+              <div className="bulb">{card.component}</div>
+              <p>{card.copy}</p>
+            </div>
+          </Card>
         ))}
-      </BioCardSection>
-    </BioCardWrapper>
+      </BioCardContent>
+    </BioCardContainer>
   )
 }
+
+const BioCardContainer = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const BioCardContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  margin: auto;
+  padding-bottom: 4em;
+  
+    &:nth-of-type(2) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    &:nth-of-type(3) {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    &:nth-of-type(4) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+  p {
+    margin: auto;
+    padding: 0 1.2em 1em 1.2em;
+  }
+  .card {
+    width: 25em;
+    height: 20em;
+  }
+  .card
+  .bulb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    height: 11em;
+    /* width: 2em; */
+  }
+  .bulb:hover {
+    box-shadow: none;
+  }
+  h3 {
+    font-size: 3em;
+  }
+`

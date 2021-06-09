@@ -1,15 +1,11 @@
 import React from "react"
-
-import Layout from "../components/Layout"
-import Head from "../components/head"
-import { PortfolioCard } from "../components/PortfolioCard"
-
-// import * as portfolioStyles from "./portfolio.module.scss"
-
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
-
 import styled from "styled-components"
+
+import { PortfolioCard } from "../components/PortfolioCard"
+import Head from "../components/head"
+import Layout from "../components/Layout"
 
 const PortfolioContainer = styled.main`
   display: flex;

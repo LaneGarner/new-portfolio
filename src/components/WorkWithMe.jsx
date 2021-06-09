@@ -2,16 +2,46 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+export const WorkWithMe = () => {
+  return (
+    <HireMeContent>
+      <div className="text-container">
+        <h2>Work with me</h2>
+        <p>
+          I offer freelance web and mobile development services to clients.
+          Let's work together to create your dream website or app.
+        </p>
+        <p>
+          <Link to="/portfolio">
+            <strong>Browse my portfolio</strong>
+          </Link>{" "}
+          as an introduction to my work <br />
+          or{" "}
+          <Link to="/contact">
+            <strong>get in touch</strong>
+          </Link>{" "}
+          to start a conversation.
+        </p>
+      </div>
+    </HireMeContent>
+  )
+}
+
 const HireMeContent = styled.div`
-  padding: 4rem 8rem;
+  padding: 4em 8em;
   position: relative;
   z-index: 100;
   color: white;
   animation: fadeIn 2s;
+  @media (max-width: 800px) {
+    padding: 4em 3em;
+    /* width: 100%; */
+    /* margin: 0; */
+  }
 
   .text-container {
     max-width: 50em;
-    margin: 9em auto 10em 5em;
+    margin: 6em auto;
   }
 
   a {
@@ -36,6 +66,7 @@ const HireMeContent = styled.div`
     content: "";
     position: absolute;
     left: 0;
+    background: var(--lightest-grey);
     top: 0;
     right: 0;
     bottom: 0;
@@ -45,37 +76,7 @@ const HireMeContent = styled.div`
     outline: 1px solid transparent;
     backface-visibility: hidden;
     background: #232526;
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    background: linear-gradient(to right, #414345, #232526);
+    background: -webkit-linear-gradient(to right, #518f46, #232526);
+    background: linear-gradient(to right, #466a8f, #2222222);
   }
 `
-
-export const WorkWithMe = () => {
-  return (
-    <HireMeContent>
-      <div className="text-container">
-        <h2>Hire me</h2>
-        <p>
-          I am currently seeking full-time employment as a front-end developer.
-          I have experience working on a remote dev team and thrive in an agile
-          environment.
-        </p>
-        <p>
-          I also do freelance web development services for clients. Let's work
-          together to create your dream website or app.
-        </p>
-        <p>
-          <Link to="/portfolio">
-            <strong>Browse my portfolio</strong>
-          </Link>{" "}
-          as an introduction to my work <br />
-          or{" "}
-          <Link to="/contact">
-            <strong>get in touch</strong>
-          </Link>{" "}
-          to start a conversation.
-        </p>
-      </div>
-    </HireMeContent>
-  )
-}

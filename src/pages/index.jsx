@@ -9,24 +9,7 @@ import Head from "../components/head"
 import { WorkWithMe } from "../components/WorkWithMe"
 import { Hero } from "../components/Hero"
 import { IBuild } from "../components/IBuild"
-
-export const query = graphql`
-  query myProfilePic {
-    file(relativePath: { eq: "profilePic.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-
-const BottomContentWrapper = styled.section`
-  background: var(--lightest-grey);
-  /* padding: var(--skew-padding) 0; */
-  margin-top: -100px;
-`
+import { BottomContentWrapper } from "../components/BottomContentWrapper"
 
 const indexPage = ({ data }) => {
   return (
@@ -44,3 +27,15 @@ const indexPage = ({ data }) => {
 }
 
 export default indexPage
+
+export const query = graphql`
+  query myProfilePic {
+    file(relativePath: { eq: "profilePic.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

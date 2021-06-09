@@ -35,6 +35,8 @@ $red: #bb2b11;
   --magic-number: 0.09719;
   --skew-padding: calc(var(--width) * var(--magic-number));
   --clip-padding: calc(var(--full-width) * var(--magic-number));
+
+  --border-radius: 3rem;
 }
 
 * {

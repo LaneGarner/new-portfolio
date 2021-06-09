@@ -6,53 +6,9 @@ import styled from "styled-components"
 
 import { ThemeContext } from "../context/ThemeContext"
 
-const HeroContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  min-height: 70vh;
-
-  a {
-    text-decoration-color: var(--react-blue);
-  }
-  .right-content {
-    display: flex;
-    flex-direction: column;
-    margin: 0.8em 2em 2em;
-    min-width: 300px;
-    margin-left: 2em;
-    color: ${props =>
-      props.theme === "dark" ? "var(--lightest-grey)" : "var(--black)"};
-  }
-  .hello {
-    font-size: 4rem;
-    margin-bottom: 0;
-    font-weight: 800;
-    line-height: 1.1;
-  }
-  .bio {
-    font-weight: 100;
-    padding: 0.3em 0;
-    font-size: 1.62671rem;
-    line-height: 1.1;
-    padding: 0.3em 0;
-  }
-  .contact {
-    font-size: 1.2rem;
-  }
-`
-
 export const Hero = () => {
   const { theme } = useContext(ThemeContext)
-  // const theme = "dark"
-  // const setTheme = () => {
-  //   console.log("hey")
-  // }
-  // const toggleTheme = () => {
-  //   console.log("hey")
-  // }
+
   return (
     <HeroContainer theme={theme}>
       <section className="left-content">
@@ -60,8 +16,8 @@ export const Hero = () => {
           src="../images/profilePic.jpg"
           alt="Profile pic"
           placeholder="blurred"
-          width={300}
-          height={300}
+          width={375}
+          height={375}
           objectFit="cover"
           imgStyle={{ borderRadius: "50%" }}
           style={{ borderRadius: "50%" }}
@@ -79,8 +35,7 @@ export const Hero = () => {
         </div>
         <p className="bio">
           I'm<span style={{ fontWeight: 800 }}> Lane Garner,</span>
-          <br /> a full-stack developer
-          <br /> with a passion for the front-end
+          <br /> a fullstack developer
           <br /> based in Austin, Texas.
         </p>
         <p className="contact">
@@ -94,3 +49,67 @@ export const Hero = () => {
     </HeroContainer>
   )
 }
+
+const HeroContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  min-height: 70vh;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  a {
+    text-decoration-color: var(--react-blue);
+  }
+  .left-content {
+    margin: 2em;
+  }
+  .right-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em 2em 2em;
+    min-width: 300px;
+    margin-left: 2em;
+    color: ${props =>
+      props.theme === "dark" ? "var(--lightest-grey)" : "var(--black)"};
+  }
+  .hello {
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-weight: 800;
+    line-height: 1.1;
+    @media (max-width: 1000px) {
+      margin: auto;
+    }
+  }
+  .bio {
+    font-weight: 100;
+    padding: 0.3em 0;
+    font-size: 1.62671rem;
+    line-height: 1.1;
+    padding: 0.3em 0;
+    @media (max-width: 1000px) {
+      margin: auto;
+      text-align: center;
+    }
+  }
+  .contact {
+    font-size: 1.2rem;
+    color: var(--react-blue);
+    background: var(--darkest-grey);
+    padding: 0.55em;
+    border-radius: 0.2px;
+    a {
+      color: var(--js-yellow);
+    }
+    @media (max-width: 1000px) {
+      margin-top: 2em;
+      margin-right: auto;
+      margin-left: auto;
+      width: 12em;
+      text-align: center;
+    }
+  }
+`

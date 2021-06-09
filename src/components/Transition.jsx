@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import TextTransition, { presets } from "react-text-transition"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
+import { BreakpointProvider } from "gatsby-plugin-breakpoints"
 
-const TEXTS = [
+const TEXT = [
   "fast",
   "responsive",
   "dynamic",
@@ -14,29 +16,26 @@ const TEXTS = [
 const Transition = () => {
   const [index, setIndex] = React.useState(0)
 
-  React.useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex(index => index + 1),
-      1600 // every 1600ms
-    )
+  const breakpoints = useBreakpoint()
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex(index => index + 1), 1600)
     return () => clearTimeout(intervalId)
   }, [])
 
   return (
-    // <div style={{backgroundColor: "red", width: "1000px"}}>
     <TextTransition
-      text={TEXTS[index % TEXTS.length]}
-      springConfig={presets.stiff}
+      text={TEXT[index % TEXT.length]}
+      springConfig={presets.wobbly}
       direction="up"
       inline={true}
       style={{
         fontStyle: "italic",
         minWidth: "5rem",
-        fontSize: "1em",
         fontFamily: "monospace",
       }}
+      style={breakpoints.md ? { fontSize: "0.6em" } : { fontSize: "1em" }}
     />
-    // </div>
   )
 }
 
