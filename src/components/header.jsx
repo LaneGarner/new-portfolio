@@ -107,8 +107,7 @@ const Top = styled.header`
     @media (max-width: 1024px) {
       text-align: center;
       font-size: 1.5rem;
-      transform: translateY(-10px);
-      /* line-height: 0.5em; */
+      /* transform: translateY(-10px); */
     }
   }
 
