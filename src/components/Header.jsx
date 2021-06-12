@@ -29,7 +29,7 @@ const Header = () => {
         <div className="title">
           <div className="header-container">
             <div onClick={toggleTheme} className="logo">
-              <Logo width="122.3365" height="92.13775" />
+              <Logo theme={theme} width="122.3365" height="92.13775" />
             </div>
             <div>
               <Link className="title-container" to="/">
@@ -136,8 +136,10 @@ const Top = styled.header`
 
   .logo {
     margin: 0.2rem auto 0.9rem;
-    /* cursor: pointer; */
-    cursor: url("https://fav.farm/🌞"), auto;
+    cursor: ${props =>
+      props.theme === "dark"
+        ? `url("https://lanegarner.github.io/images/sun.png"), auto`
+        : `url("https://lanegarner.github.io/images/moon.png"), auto`};
   }
 
   .header-container::after {
