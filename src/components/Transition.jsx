@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import TextTransition, { presets } from "react-text-transition"
 import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import { BreakpointProvider } from "gatsby-plugin-breakpoints"
@@ -14,7 +14,7 @@ const TEXT = [
 ]
 
 const Transition = () => {
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = useState(0)
 
   const breakpoints = useBreakpoint()
 
@@ -26,7 +26,7 @@ const Transition = () => {
   return (
     <TextTransition
       text={TEXT[index % TEXT.length]}
-      springConfig={presets.wobbly}
+      springConfig={presets.stiff}
       direction="up"
       inline={true}
       style={{

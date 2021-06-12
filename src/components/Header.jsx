@@ -136,7 +136,8 @@ const Top = styled.header`
 
   .logo {
     margin: 0.2rem auto 0.9rem;
-    cursor: pointer;
+    /* cursor: pointer; */
+    cursor: url("https://fav.farm/🌞"), auto;
   }
 
   .header-container::after {
