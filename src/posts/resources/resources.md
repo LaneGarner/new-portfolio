@@ -10,6 +10,8 @@ Every so often someone who is just starting the journey of learning to code reac
 
 There are tons of great resources for learning web development. From books to YouTube creators to Udemy courses to training websites... the options can be overwhelming at times. This post is a curated list with some of my favorites!
 
+Note: I am currently putting these resources together AS WE SPEAK. So if this list seems a bit incomplete, well it is! Check back later for updates and I will continue to add to this list as I find the time. Thanks for checking this post out and good luck with your learning.
+
 ## Basics - HTML, CSS & (Vanilla) JavaScript
 
 ### Free Resources
@@ -38,3 +40,14 @@ Two of the best docs for the basics are <a href="https://developer.mozilla.org/"
 <a href="https://flexboxfroggy.com/" target="blank"></a>
 <a href="https://cssgridgarden.com/" target="blank"></a>
 <a href="https://cssgridgarden.com/" target="blank"></a>
+
+## Flexbox
+
+<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/> target="blank></a>
+<a href="https://flexboxfroggy.com/">Flexbox Froggy</a>
+
+## CSS Grid
+
+<a href="https://cssgrid.io/">Wes Bos Free Grid Course</a>
+<a href="https://cssgridgarden.com/">CSS Grid Garden</a>
+<a href="https://cssgrid-generator.netlify.app/">CSS Grid Generator</a>
