@@ -28,6 +28,9 @@
 
   .blog-content {
     margin: 2em 8em;
+    @media (max-width: 800px) {
+      margin: 2em 2em;
+    }
   }
 
   p {
@@ -46,6 +49,9 @@
     svg {
       margin-right: 0.5em;
       color: var(--dark-grey);
+    }
+    @media (max-width: 800px) {
+      display: none;
     }
   }
 }
