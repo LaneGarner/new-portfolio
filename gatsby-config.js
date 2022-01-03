@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Lane Garner - Web & Mobile Developer & Designer",
+    title: "Lane Garner - Web & Mobile Developer",
     author: "Lane Garner",
     subtitle: "Web & Mobile",
-    subtitle2: "Developer & Designer",
+    subtitle2: "Developer",
   },
   plugins: [
     {
