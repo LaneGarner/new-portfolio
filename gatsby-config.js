@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: "Lane Garner - Web & Mobile Developer",
+    title: "Lane Garner - Web & Mobile Developer & Designer",
     author: "Lane Garner",
     subtitle: "Web & Mobile",
-    subtitle2: "Developer",
+    subtitle2: "Developer & Designer",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Lane Garner - Web & Mobile`,
+        name: `Lane Garner - Web & Mobile Developer & Designer`,
         short_name: `Lane Garner`,
         start_url: `/`,
         background_color: `#fafafa`,
@@ -54,6 +54,5 @@ module.exports = {
         ],
       },
     },
-    // `gatsby-plugin-mdx`,
   ],
 }
