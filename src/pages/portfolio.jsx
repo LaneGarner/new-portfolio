@@ -12,6 +12,7 @@ const PortfolioContainer = styled.main`
   flex-direction: column;
   align-items: center;
   padding-bottom: 4rem;
+  margin-top: 1em;
   h1 {
     margin-bottom: 0.3em;
   }
@@ -22,6 +23,7 @@ const PortfolioContainer = styled.main`
   p {
     text-align: center;
     max-width: 30em;
+    margin-top: 0.5em;
   }
   a {
     text-decoration: none;
@@ -32,13 +34,6 @@ const PortfolioCardContainer = styled.section`
   flex-wrap: wrap;
   justify-content: center;
 `
-
-// .portfolio-container {
-// }
-
-// .portfolio-card-container {
-
-// }
 
 const GarnerGuitarPreview = () => {
   return (

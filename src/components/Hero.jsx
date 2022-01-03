@@ -24,9 +24,19 @@ export const Hero = () => {
         />
       </section>
       <section className="right-content">
+        {/* <div style={{ fontSize: "7em" }}>👋</div> */}
         <div className="hello">
           <ReactTypingEffect
-            text={"Hello."}
+            text={[
+              "Hello.",
+              // "hi",
+              // "howdy",
+              // "hola",
+              // "yo",
+              // "hey",
+              // "greetings",
+              // "eyyye",
+            ]}
             typingDelay={1000}
             eraseDelay={1500}
             speed={300}
@@ -35,11 +45,11 @@ export const Hero = () => {
         </div>
         <p className="bio">
           I'm<span style={{ fontWeight: 800 }}> Lane Garner</span>,
-          <br /> a fullstack developer
+          <br /> a front-end developer
           <br /> based in Austin, Texas.
         </p>
         <p className="contact">
-          Need a developer?{" "}
+          Need a dev?{" "}
           <Link to="/contact" style={{ textDecoration: "underline" }}>
             <strong>Get in touch</strong>
           </Link>
@@ -76,7 +86,7 @@ const HeroContainer = styled.section`
       props.theme === "dark" ? "var(--lightest-grey)" : "var(--black)"};
   }
   .hello {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0;
     font-weight: 800;
     line-height: 1.1;

@@ -8,7 +8,7 @@ import Head from "../components/head"
 import { ThemeContext } from "../context/ThemeContext"
 
 const BlogPage = ({ data }) => {
-  const posts = data.posts.edges
+  const posts = data.posts.edges.reverse()
 
   return (
     <Layout>
@@ -86,7 +86,7 @@ const BlogContainer = styled.div`
   }
 
   .post {
-    margin: 1rem 0;
+    margin: 2em;
 
     a {
       background: var(--lightest-grey);

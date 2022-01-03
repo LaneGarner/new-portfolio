@@ -62,7 +62,7 @@ const Footer = () => {
           </a>{" "}
           with{" "}
           <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">
-            GatsbyJS
+            Gatsby
           </a>{" "}
           and{" "}
           <a
@@ -101,6 +101,9 @@ const FooterContainer = styled.footer`
       color: var(--react-blue);
     }
   }
+  .footer-icon {
+    font-size: 0.8em;
+  }
   div {
     display: flex;
   }
@@ -133,7 +136,6 @@ const FooterContainer = styled.footer`
       color: var(--sass-pink);
     }
     @media (max-width: 600px) {
-      /* font-size: 0.8em; */
       flex-direction: column;
       align-items: center;
     }

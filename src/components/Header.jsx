@@ -34,7 +34,7 @@ const Header = () => {
             <div>
               <Link className="title-container" to="/">
                 <span className="author">{data.site.siteMetadata.author}</span>
-                {breakpoints.md && <br />}
+                {breakpoints.sm && <br />}
                 <span className="subtitle">
                   {" "}
                   {data.site.siteMetadata.subtitle} {breakpoints.sm && <br />}
@@ -107,8 +107,10 @@ const Top = styled.header`
     @media (max-width: 1024px) {
       text-align: center;
       font-size: 1.5rem;
-      transform: translateY(5px);
-      /* test */
+      transform: translateY(12px);
+    }
+    @media (max-width: 720px) {
+      transform: translateY(-15px);
     }
   }
 

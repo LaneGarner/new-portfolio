@@ -10,12 +10,14 @@ import { WorkWithMe } from "../components/WorkWithMe"
 import { Hero } from "../components/Hero"
 import { IBuild } from "../components/IBuild"
 import { BottomContentWrapper } from "../components/BottomContentWrapper"
+import { About } from "../components/About"
 
 const indexPage = ({ data }) => {
   return (
     <Layout>
       <Head title="Home" />
       <Hero />
+      {/* <About /> */}
       <WorkWithMe />
       <BottomContentWrapper>
         <IBuild />
