@@ -30,7 +30,10 @@ const Head = ({ title }) => {
           content="Lane Garner - Web and Mobile Developer"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Web and Mobile Developer" />
+        <meta
+          property="og:description"
+          content="Lane Garner - Web and Mobile Developer"
+        />
         <meta
           property="og:image"
           content="https://lanegarner.github.io/images/lg-dev-og.png"

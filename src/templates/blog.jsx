@@ -5,9 +5,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-
-import * as blogPostStyles from "./blogpost.module.scss"
-
 import { FaArrowCircleLeft } from "react-icons/fa"
 import { ThemeContext } from "../context/ThemeContext"
 
