@@ -37,8 +37,8 @@ export const BioCards = () => {
   return (
     <BioCardContainer>
       <BioCardContent>
-        {cards.map((card, index) => (
-          <Card theme={theme} background={background}>
+        {cards.map((card, i) => (
+          <Card key={i} theme={theme} background={background}>
             <div className="card">
               <div className="card-icon">{card.component}</div>
               <p>{card.copy}</p>
@@ -102,7 +102,7 @@ const BioCardContent = styled.div`
     align-items: center;
     width: auto;
     box-shadow: none;
-    margin: 0;
+    margin: 2em 0 0;
     padding: 0;
     height: 11em;
     @media (max-width: 650px) {

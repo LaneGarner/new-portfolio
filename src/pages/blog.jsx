@@ -9,11 +9,12 @@ import { ThemeContext } from "../context/ThemeContext"
 
 const BlogPage = ({ data }) => {
   const posts = data.posts.edges.reverse()
+  const { theme } = useContext(ThemeContext)
 
   return (
     <Layout>
       <Head title="Blog" />
-      <BlogContainer>
+      <BlogContainer theme={theme}>
         <h1>Blog</h1>
         <p>My blog posts</p>
         <ol className="posts">
@@ -78,6 +79,7 @@ const BlogContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1em;
   margin-bottom: 2em;
 
   .blog-img {
@@ -85,12 +87,22 @@ const BlogContainer = styled.div`
     margin: 1em;
   }
 
-  .post {
-    margin: 2em;
+  h1 {
+    margin-bottom: 5px;
+  }
 
+  h1, h2, p:nth-of-type(1) {
+    color: ${props =>
+      props.theme === "dark" ? "var(--lightest-grey)" : "var(--dark-grey)"}}
+  }
+
+  .post {
+    margin-bottom: 4em;
+    
     a {
-      background: var(--lightest-grey);
-      color: #000;
+      background: ${props =>
+        props.theme === "dark" ? "var(--black)" : "var(--lightest-grey)"};
+      /* color: #000; */
       display: block;
       padding: 1rem;
       text-decoration: none;
@@ -100,16 +112,22 @@ const BlogContainer = styled.div`
       width: 40em;
       border-radius: var(--border-radius);
       padding: 2em;
+
+      @media (max-width: 720px) {
+        width: 85vw;
+        margin: auto;
+      }
       h2 {
         width: 10em;
         text-align: center;
         line-height: 0.8em;
-        margin-bottom: 0;
+        margin-bottom: 5px;
       }
     }
 
     a:hover {
-      background: #e4e4e4;
+      background: ${props =>
+        props.theme === "dark" ? "var(--black)" : "#e4e4e4"};
     }
 
     p {
@@ -119,7 +137,7 @@ const BlogContainer = styled.div`
       width: 90%;
     }
     .date {
-      font-size: 1.2em;
+      font-size: 1em;
       margin-bottom: 0;
       margin-top: 5px;
       text-align: center;

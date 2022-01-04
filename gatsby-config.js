@@ -12,8 +12,6 @@ module.exports = {
         name: `Lane Garner - Web & Mobile Developer & Designer`,
         short_name: `Lane Garner`,
         start_url: `/`,
-        background_color: `#fafafa`,
-        theme_color: `#fafafa`,
         display: `standalone`,
         icon: `src/images/icon.png`,
       },

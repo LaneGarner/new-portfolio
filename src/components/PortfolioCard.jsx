@@ -27,7 +27,7 @@ export const PortfolioCard = ({
           <p>{description}</p>
         </div>
         <div className="preview">
-          <a className="title" href={url} rel="noreferrer" target="_blank">
+          <a className="image" href={url} rel="noreferrer" target="_blank">
             {img}
           </a>
         </div>
@@ -64,6 +64,10 @@ const PortfolioCardContainer = styled.div`
   grid-template-rows: 0.3fr 0.9fr 2fr 0.7fr 0.8fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  @media (max-width: 720px) {
+    width: 60vw;
+    grid-template-rows: 0.3fr 0.9fr 1fr 0.7fr 0.8fr;
+  }
   h2 {
     font-size: 2.5rem;
     padding-top: 2rem;
@@ -78,6 +82,7 @@ const PortfolioCardContainer = styled.div`
     grid-area: 2 / 2 / 3 / 4;
     font-size: 1.1em;
   }
+  
   .uses {
     grid-area: 4 / 2 / 5 / 4;
     font-size: 1.1em;

@@ -25,11 +25,11 @@ const CardStyles = styled.article`
       : props.theme === "light" && props.background !== "light"
       ? "var(--lightest-grey)"
       : props.theme === "dark"
-      ? "var(--darker-grey)"
+      ? "var(--black)"
       : "var(--lightest-grey)"};
   margin: 2rem 3rem;
   border-radius: var(--border-radius);
-  padding: 3rem;
+  padding: 1rem 3rem 3rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
   &:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.11);

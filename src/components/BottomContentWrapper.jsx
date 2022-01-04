@@ -14,7 +14,7 @@ export const BottomContentWrapper = ({ children }) => {
 
 const BottomContentWrapperContainer = styled.div`
   background: ${props =>
-    props.theme === "dark" ? "var(--black)" : "var(--lightest-grey)"};
+    props.theme === "dark" ? "var(--darkest-grey)" : "var(--lightest-grey)"};
 
   /* background: red; */
   /* padding: var(--skew-padding) 0; */

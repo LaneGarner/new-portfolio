@@ -7,34 +7,6 @@ import { PortfolioCard } from "../components/PortfolioCard"
 import Head from "../components/head"
 import Layout from "../components/Layout"
 
-const PortfolioContainer = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 4rem;
-  margin-top: 1em;
-  h1 {
-    margin-bottom: 0.3em;
-  }
-  h1,
-  h2 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
-    max-width: 30em;
-    margin-top: 0.5em;
-  }
-  a {
-    text-decoration: none;
-  }
-`
-const PortfolioCardContainer = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`
-
 const GarnerGuitarPreview = () => {
   return (
     <StaticImage
@@ -90,13 +62,13 @@ const AboutPage = ({ data }) => {
       <PortfolioContainer>
         <h1>Portfolio</h1>
         <p>
-          Some projects that demonstrate my style and highlight a variety of
+          Selected projects that demonstrate my style and highlight a variety of
           tech I've worked with:
         </p>
         <PortfolioCardContainer>
           <PortfolioCard
             name="Shedr"
-            description="Musician’s practice toolkit web app"
+            description="Musician's practice toolkit web app"
             img={<ShedrPreview />}
             uses="React, Node.js, SCSS, &#38; Firebase"
             url="https://shedr.app"
@@ -140,3 +112,33 @@ const AboutPage = ({ data }) => {
 }
 
 export default AboutPage
+
+const PortfolioContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  margin-top: 1em;
+  h1 {
+    margin-bottom: 5px;
+  }
+  h1,
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    max-width: 30em;
+    @media (max-width: 720px) {
+      width: 75vw;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+`
+const PortfolioCardContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`

@@ -23,6 +23,7 @@ const LayoutContainer = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background-color: dark;
+  overflow-x: hidden;
   .layout-content {
     flex-grow: 1;
   }
