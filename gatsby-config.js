@@ -4,6 +4,9 @@ module.exports = {
     author: "Lane Garner",
     subtitle: "Web & Mobile",
     subtitle2: "Developer",
+    image: "/og-image.png",
+    twitterUsername: "lanegarner",
+    url: "https://lanegarner.dev",
   },
   plugins: [
     {

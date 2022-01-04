@@ -25,7 +25,7 @@ const Head = ({ title }) => {
     <>
       <Helmet title={` | ${data.site.siteMetadata.title}`}>
         <meta name="theme-color" content={themeColor} />
-        <meta property="og:title" content="Lane Garner" />
+        {/* <meta property="og:title" content="Lane Garner" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Web and Mobile Developer" />
         <meta
@@ -33,7 +33,7 @@ const Head = ({ title }) => {
           content="https://lanegarner.dev/og-image.png"
         />
         <meta property="og:url" content="https://lanegarner.dev" />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" /> */}
       </Helmet>
     </>
   )
