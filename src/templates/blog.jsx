@@ -38,6 +38,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <Head title={data.markdownRemark.frontmatter.title} />
       <BlogPostStyled theme={theme.theme} className="blog-post-container">
         <Link className="back-button" to="/blog">
           <FaArrowCircleLeft />

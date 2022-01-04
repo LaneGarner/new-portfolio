@@ -25,7 +25,10 @@ const Head = ({ title }) => {
     <>
       <Helmet title={` | ${data.site.siteMetadata.title}`}>
         <meta name="theme-color" content={themeColor} />
-        <meta property="og:title" content="Lane Garner" />
+        <meta
+          property="og:title"
+          content="Lane Garner - Web and Mobile Developer"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Web and Mobile Developer" />
         <meta
