@@ -40,7 +40,10 @@ const ContactPage = () => {
             <textarea id="message" name="message" />
           </div>
           {/* <div> */}
-          <ReCAPTCHA sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY} />
+          <ReCAPTCHA
+            className="recaptcha"
+            sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+          />
           {/* </div> */}
           <div className="flex-center">
             <button type="submit">Send</button>
@@ -63,7 +66,9 @@ const ContactContainer = styled.div`
     color: var(--black);
     border: none;
     padding: 0.5em 2em;
-    margin-top: 1em;
     border-radius: var(--border-radius);
+  }
+  .recaptcha {
+    margin: 1.5em auto;
   }
 `
