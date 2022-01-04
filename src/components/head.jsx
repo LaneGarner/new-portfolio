@@ -25,18 +25,21 @@ const Head = ({ title }) => {
     <>
       <Helmet title={` | ${data.site.siteMetadata.title}`}>
         <meta name="theme-color" content={themeColor} />
-        {/* <meta property="og:title" content="Lane Garner" />
+        <meta property="og:title" content="Lane Garner" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Web and Mobile Developer" />
         <meta
           property="og:image"
-          content="https://lanegarner.dev/og-image.png"
+          content="https://lanegarner.github.io/images/lg-dev-og.png"
         />
         <meta property="og:url" content="https://lanegarner.dev" />
-        <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
     </>
   )
 }
+
+// saving for gatsby-config siteMetdata if needed
+// image: "/og-image.png",
 
 export default Head
