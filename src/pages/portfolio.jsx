@@ -29,17 +29,6 @@ const ShedrPreview = () => {
     />
   )
 }
-const DraftrrPreview = () => {
-  return (
-    <StaticImage
-      src="../images/draftrr-screenshot.png"
-      alt="Draftrr preview"
-      placeholder="blurred"
-      objectFit="cover"
-      style={{ borderRadius: "0.5em" }}
-    />
-  )
-}
 
 export const query = graphql`
   query PreviewPic {
@@ -90,14 +79,6 @@ const AboutPage = ({ data }) => {
             url="https://github.com/LaneGarner/today-list"
             github="https://github.com/LaneGarner/today-list"
           /> */}
-          <PortfolioCard
-            name="Draftrr"
-            description="Draftrr is a writing application that encourages finishing the first draft"
-            img={<DraftrrPreview />}
-            uses="Built with remote team using React, Bootstrap, MySQL, &#38; MongoDB"
-            url="https://draftrr.com"
-            github="https://github.com/theMVPshop/DT02/tree/main/draftrr-react"
-          />
           {/* <PortfolioCard 
                     name=""
                     description=""
